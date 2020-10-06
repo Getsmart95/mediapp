@@ -1,0 +1,5026 @@
+//colors
+$color_dorado_approx: #555555;
+$black_9: rgba(0,0,0, 0.09);
+$color_mine_shaft_approx: #333333;
+$white: #ffffff;
+$white_85: rgba(255,255,255, 0.85);
+$white_70: rgba(255,255,255, 0.7);
+$color_mercury_approx: #e7e7e7;
+$color_alabaster_approx: #f9f9f9;
+$color_dove_gray_approx: #666666;
+$color_apple_approx: #3db13d;
+$color_martini_approx: #9d9d9d;
+$color_apple_38_approx: rgba(61,177,61, 0.38);
+$color_silver_chalice_38_approx: rgba(161,161,161, 0.38);
+$black_6: rgba(0,0,0, 0.06);
+$black_7: rgba(0,0,0, 0.07);
+$color_torea_bay_approx: #13a;
+$color_periwinkle_approx: #bdd2ff;
+$color_spindle_approx: #aabde6;
+$color_polo_blue_approx: #9aaedb;
+$color_hawkes_blue_approx: #cfdeff;
+$color_solitude_approx: #dfeeff;
+$white_50: rgba(255,255,255,.5);
+$white_8: rgba(255,255,255, 0.08);
+$white_60: rgba(255,255,255, 0.6);
+$black_8: rgba(0,0,0,0.08);
+$black_3: rgba(0,0,0,0.03);
+$black_4: rgba(0, 0, 0, 0.04);
+$alabaster: #fafafa;
+$black_5: rgba(0, 0, 0, 0.05);
+$black_10: rgba(0, 0, 0, 0.1);
+$color_silver_chalice_approx: #adadad;
+$black_18: rgba(0,0,0, 0.18);
+$color_gray_approx: #848484;
+$black_12: rgba(0,0,0, 0.12);
+$black_16: rgba(0,0,0, 0.16);
+$color_silver_approx: #bfbfbf;
+$color_boulder_approx: #777777;
+$color_timberwolf_approx: #cfcdc7;
+$color_hippie_blue_approx: #6ba1ad;
+$chicago: #5d5c58;
+$color_half_baked_approx: #7ebdcb;
+$color_alto_approx: #dddddd;
+$black_15: rgba(0,0,0, 0.15);
+$color_apple_40_approx: rgba(61,177,61, 0.4);
+$alabaster_100: rgba(250,250,250,1);
+$mercury: #e5e5e5;
+$color_iron_approx: #d2d4d5;
+$black_100: rgba(0,0,0,1);
+$black_88: rgba(0,0,0,0.88);
+$black_50: rgba(0,0,0, 0.5);
+$color_mine_shaft_65_approx: rgba(51,51,51, 0.65);
+$color_chambray_approx: #3b5998;
+$color_picton_blue_approx: #55acee;
+$color_punch_approx: #dd4b39;
+$black_30: rgba(0,0,0, 0.3);
+$black_55: rgba(0,0,0, 0.55);
+$black_60: rgba(0,0,0, 0.6);
+$white_80: rgba(255,255,255, 0.8);
+$color_gallery_65_approx: rgba(238,238,238, 0.65);
+$color_cinder_60_approx: rgba(14,12,17, 0.6);
+$black_2: rgba(0,0,0, 0.02);
+$black: #000;
+$concrete: #f2f2f2;
+$color_deep_cerulean_approx: #007bb5;
+$red: #ff0000;
+$color_conifer_approx: #aad450;
+$color_roman_approx: #e95950;
+
+//fonts
+$font_0: Montserrat;
+$font_1: sans-serif;
+$font_2: Bpreplay;
+$font_3: Lato;
+$font_4: Font Awesome 5 Free;
+$font_5: flexslider-icon;
+
+//urls
+$url_0: url(images/search-icon.png);
+$url_1: url( images/dotted-search.png);
+$url_2: url(../image/scale.png);
+$url_3: url(images/mobile-search-icon.png);
+$url_4: url(images/demo/signup-background.jpg);
+$url_5: url(images/demo/plans-background.jpg);
+
+//@extend-elements
+//original selectors
+//h1, h2, h3, h4, h5, h6
+%extend_1 {
+	font-family: $font_0, $font_1;
+	font-weight: 700;
+	color: $color_mine_shaft_approx;
+	margin-bottom: 0.6rem;
+}
+
+//original selectors
+//ul.page-numbers li span.page-numbers.current, a.not-a-member-pro:hover, .sf-menu a:before, body .short-border-bottom:after, .btn-green-pro, .btn:hover, .flex-control-paging li a.flex-active, .btn-header-pro:hover, #pro-scroll-top:hover
+%extend_2 {
+	color: $white;
+	border-color: $color_apple_approx;
+	background: $color_apple_approx;
+}
+
+//original selectors
+//ul#friends-activity-profiles li.friends-activity-profiles-more a:hover, .btn-green-pro:hover
+%extend_3 {
+	color: $white;
+	border-color: $color_martini_approx;
+	background: $color_martini_approx;
+}
+
+
+body {
+	font: 15px/1.8 'Lato', sans-serif;
+	color: $color_dorado_approx;
+	.asRange {
+		.asRange-selected {
+			background: $color_apple_approx;
+		}
+		.asRange-pointer:before {
+			background: $color_apple_approx;
+		}
+	}
+	.short-border-bottom:after {
+		@extend %extend_2;
+	}
+	.flex-control-paging * {
+		//Instead of the line below you could use @include box-sizing($bs)
+		box-sizing: content-box;
+	}
+}
+input {
+	font: 15px/1.8 'Lato', sans-serif;
+	color: $color_dorado_approx;
+}
+textarea {
+	font: 15px/1.8 'Lato', sans-serif;
+	color: $color_dorado_approx;
+}
+select {
+	font: 15px/1.8 'Lato', sans-serif;
+	color: $color_dorado_approx;
+	&.custom-select:focus {
+		border-color: $color_apple_approx;
+		outline: none;
+		//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		box-shadow: none;
+	}
+}
+hr {
+	border-color: $black_9;
+	margin-bottom: 1.5rem;
+}
+p {
+	margin-bottom: 1.5rem;
+	&.small-paragraph-spacing {
+		margin-bottom: 1rem;
+	}
+	&.light-fonts-pro {
+		color: $white_85;
+	}
+	&.progression-studios-slider-description {
+		font-size: 14px;
+		margin-bottom: 25px;
+	}
+}
+h1 {
+	@extend %extend_1;
+	&.light-fonts-pro {
+		color: $white;
+	}
+	&.heading-extra-margin-bottom {
+		margin-bottom: 1.2rem;
+	}
+	&.light-weight-heading {
+		font-weight: 400;
+	}
+}
+h2 {
+	@extend %extend_1;
+	&.light-fonts-pro {
+		color: $white;
+	}
+	&.heading-extra-margin-bottom {
+		margin-bottom: 1.2rem;
+	}
+	&.registration-final-heading {
+		font-size: 18px;
+		font-weight: 400;
+		text-align: center;
+		margin-bottom: 25px;
+		span {
+			color: $color_apple_approx;
+			font-weight: 600;
+		}
+	}
+	&.content-sidebar-sub-header {
+		font-size: 22px;
+		margin-bottom: 20px;
+		&.adjusted-recent-reviews {
+			font-size: 18px;
+		}
+	}
+	&.light-weight-heading {
+		font-weight: 400;
+	}
+}
+h3 {
+	@extend %extend_1;
+	&.light-fonts-pro {
+		color: $white_70;
+	}
+	&.heading-extra-margin-bottom {
+		margin-bottom: 1.2rem;
+	}
+	&.content-sidebar-sub-header {
+		text-transform: uppercase;
+		font-size: 14px;
+		font-weight: 400;
+		letter-spacing: 0.03em;
+		margin-bottom: 20px;
+	}
+	&.light-weight-heading {
+		font-weight: 400;
+	}
+}
+h4 {
+	@extend %extend_1;
+	&.light-fonts-pro {
+		color: $white_70;
+	}
+	&.heading-extra-margin-bottom {
+		margin-bottom: 1.2rem;
+	}
+	&.content-sidebar-sub-header {
+		text-transform: uppercase;
+		font-size: 14px;
+		font-weight: 400;
+		letter-spacing: 0.03em;
+		margin-bottom: 10px;
+	}
+	&.light-weight-heading {
+		font-weight: 400;
+	}
+}
+h5 {
+	@extend %extend_1;
+	&.light-fonts-pro {
+		color: $white_70;
+	}
+	&.heading-extra-margin-bottom {
+		margin-bottom: 1.2rem;
+	}
+	&.light-weight-heading {
+		font-weight: 400;
+	}
+	&.registration-step-title {
+		font-weight: 400;
+		font-size: 14px;
+	}
+}
+h6 {
+	@extend %extend_1;
+	&.light-fonts-pro {
+		color: $white_70;
+	}
+	&.heading-extra-margin-bottom {
+		margin-bottom: 1.2rem;
+	}
+	&.light-weight-heading {
+		font-weight: 400;
+	}
+}
+.flexslider {
+	&.progression-studios-dashboard-slider {
+		background: $alabaster;
+		height: 85vh;
+		h2 {
+			font-size: 52px;
+			line-height: 1.1;
+			margin-bottom: 8px;
+			a {
+				color: $color_mine_shaft_approx;
+				&:hover {
+					color: $color_martini_approx;
+					text-decoration: none;
+				}
+			}
+			&.light-fonts-pro a {
+				color: $white;
+			}
+		}
+		&.progression-studios-full-height-slider {
+			height: calc(100vh - 90px);
+		}
+		&:after {
+			content: '';
+			display: block;
+			height: 1px;
+			width: 100%;
+			background: $black_5;
+		}
+		.container {
+			position: relative;
+		}
+		h6 {
+			font-size: 15px;
+			letter-spacing: 0.7em;
+			text-transform: uppercase;
+			margin-bottom: 25px;
+			&.created-by-heading-pro {
+				font-size: 13px;
+				text-transform: none;
+				font-weight: 400;
+				margin-bottom: 5px;
+				letter-spacing: 0.03em;
+			}
+		}
+		h5 {
+			font-size: 14px;
+			text-transform: uppercase;
+			font-weight: 400;
+			margin: 8px 0 15px;
+			letter-spacing: 0.05em;
+			&.created-by-heading-pro {
+				font-size: 14px;
+				letter-spacing: 0;
+				text-transform: none;
+				margin-bottom: 5px;
+				color: $white;
+				letter-spacing: 0.03em;
+			}
+		}
+		.circle-rating-pro {
+			position: absolute;
+			right: 20px;
+			bottom: 0;
+			z-index: 10;
+			span {
+				font: 400 20px/70px $font_0, $font_1;
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 70px;
+				text-align: center;
+			}
+		}
+		img.created-by-avatar {
+			float: left;
+			//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+			border-radius: 80px;
+			width: 48px;
+			margin-right: 12px;
+		}
+	}
+	&.progression-studios-slider {
+		background: $alabaster;
+		height: 650px;
+		&:after {
+			content: '';
+			display: block;
+			height: 1px;
+			width: 100%;
+			background: $black_5;
+		}
+	}
+	.slides {
+		zoom: 1;
+		> li {
+			display: none;
+		}
+		img {
+			width: 100%;
+			display: block;
+			height: auto;
+		}
+		&:after {
+			content: "\0020";
+			display: block;
+			clear: both;
+			visibility: hidden;
+			line-height: 0;
+			height: 0;
+		}
+	}
+	.flex-direction-nav a {
+		//Instead of the line below you could use @include transition-duration($duration-1, $duration-2, $duration-3, $duration-4, $duration-5, $duration-6, $duration-7, $duration-8, $duration-9, $duration-10)
+		transition-duration: 250ms;
+		//Instead of the line below you could use @include transition-property($property-1, $property-2, $property-3, $property-4, $property-5, $property-6, $property-7, $property-8, $property-9, $property-10)
+		transition-property: all;
+		//Instead of the line below you could use @include transition-timing-function($function-1, $function-2, $function-3, $function-4, $function-5, $function-6, $function-7, $function-8, $function-9, $function-10)
+		transition-timing-function: ease-in-out;
+		&:hover {
+			opacity: 0.7;
+		}
+	}
+	&:hover .flex-direction-nav a {
+		top: 50%;
+		opacity: 1;
+	}
+}
+.progression-studios-slider-caption-width {
+	max-width: 380px;
+	position: relative;
+	z-index: 10;
+	h6 {
+		line-height: 1.7;
+		font-weight: 400;
+		font-size: 18px;
+		margin-bottom: 30px;
+		color: $black_60;
+		&.light-fonts-pro {
+			color: $white_70;
+		}
+	}
+	h2 {
+		font-size: 56px;
+		line-height: 1.1;
+		margin-bottom: 20px;
+	}
+}
+.btn {
+	font: 400 13px $font_0, $font_1;
+	padding: 12px 20px;
+	border: 1px solid $color_mercury_approx;
+	background: $color_alabaster_approx;
+	color: $color_dove_gray_approx;
+	//Instead of the line below you could use @include transition-duration($duration-1, $duration-2, $duration-3, $duration-4, $duration-5, $duration-6, $duration-7, $duration-8, $duration-9, $duration-10)
+	transition-duration: 300ms;
+	//Instead of the line below you could use @include transition-duration($duration-1, $duration-2, $duration-3, $duration-4, $duration-5, $duration-6, $duration-7, $duration-8, $duration-9, $duration-10)
+	transition-duration: 250ms;
+	//Instead of the line below you could use @include transition-property($property-1, $property-2, $property-3, $property-4, $property-5, $property-6, $property-7, $property-8, $property-9, $property-10)
+	transition-property: color, background-color, border;
+	//Instead of the line below you could use @include transition-timing-function($function-1, $function-2, $function-3, $function-4, $function-5, $function-6, $function-7, $function-8, $function-9, $function-10)
+	transition-timing-function: ease-in-out;
+	&.btn-lg {
+		padding: 16px 30px;
+		font-size: 15px;
+	}
+	&.btn-sm {
+		padding: 10px 18px;
+		font-size: 12px;
+	}
+	&.btn-display-block {
+		display: block;
+		width: 100%;
+	}
+	i {
+		margin-right: 8px;
+	}
+	&:hover {
+		@extend %extend_2;
+	}
+	&.btn-form {
+		font-size: 12px;
+		padding-top: 12px;
+		padding-bottom: 12px;
+	}
+	&.btn-mobile-pro {
+		display: block;
+		width: 100%;
+		border: none;
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 0;
+		&.btn-green-pro {
+			margin-bottom: -1px;
+		}
+	}
+}
+button {
+	&.close {
+		//Instead of the line below you could use @include transition-duration($duration-1, $duration-2, $duration-3, $duration-4, $duration-5, $duration-6, $duration-7, $duration-8, $duration-9, $duration-10)
+		transition-duration: 250ms;
+		//Instead of the line below you could use @include transition-property($property-1, $property-2, $property-3, $property-4, $property-5, $property-6, $property-7, $property-8, $property-9, $property-10)
+		transition-property: all;
+		//Instead of the line below you could use @include transition-timing-function($function-1, $function-2, $function-3, $function-4, $function-5, $function-6, $function-7, $function-8, $function-9, $function-10)
+		transition-timing-function: ease-in-out;
+		&.float-close-pro {
+			position: fixed;
+			top: 20px;
+			right: 20px;
+			font-size: 35px;
+			z-index: 99;
+		}
+	}
+	&.btn:focus {
+		//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		box-shadow: none;
+	}
+}
+.form-group {
+	margin: 18px;
+	.btn {
+		font-size: 14px;
+	}
+	input {
+		border-color: $color_alto_approx;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		font-size: 14px;
+		//Instead of the line below you could use @include transition-duration($duration-1, $duration-2, $duration-3, $duration-4, $duration-5, $duration-6, $duration-7, $duration-8, $duration-9, $duration-10)
+		transition-duration: 250ms;
+		//Instead of the line below you could use @include transition-property($property-1, $property-2, $property-3, $property-4, $property-5, $property-6, $property-7, $property-8, $property-9, $property-10)
+		transition-property: color, background-color, border;
+		//Instead of the line below you could use @include transition-timing-function($function-1, $function-2, $function-3, $function-4, $function-5, $function-6, $function-7, $function-8, $function-9, $function-10)
+		transition-timing-function: ease-in-out;
+		&:focus {
+			border-color: $color_apple_approx;
+			outline: none;
+			//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+			box-shadow: none;
+		}
+	}
+	textarea {
+		border-color: $color_alto_approx;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		font-size: 14px;
+		//Instead of the line below you could use @include transition-duration($duration-1, $duration-2, $duration-3, $duration-4, $duration-5, $duration-6, $duration-7, $duration-8, $duration-9, $duration-10)
+		transition-duration: 250ms;
+		//Instead of the line below you could use @include transition-property($property-1, $property-2, $property-3, $property-4, $property-5, $property-6, $property-7, $property-8, $property-9, $property-10)
+		transition-property: color, background-color, border;
+		//Instead of the line below you could use @include transition-timing-function($function-1, $function-2, $function-3, $function-4, $function-5, $function-6, $function-7, $function-8, $function-9, $function-10)
+		transition-timing-function: ease-in-out;
+		&:focus {
+			border-color: $color_apple_approx;
+			outline: none;
+			//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+			box-shadow: none;
+		}
+	}
+	::-webkit-input-placeholder {
+		color: $color_silver_chalice_approx;
+	}
+	::-moz-placeholder {
+		color: $color_silver_chalice_approx;
+	}
+	:-ms-input-placeholder {
+		color: $color_silver_chalice_approx;
+	}
+	:-moz-placeholder {
+		color: $color_silver_chalice_approx;
+	}
+}
+a {
+	color: $color_apple_approx;
+	//Instead of the line below you could use @include transition-duration($duration-1, $duration-2, $duration-3, $duration-4, $duration-5, $duration-6, $duration-7, $duration-8, $duration-9, $duration-10)
+	transition-duration: 250ms;
+	//Instead of the line below you could use @include transition-property($property-1, $property-2, $property-3, $property-4, $property-5, $property-6, $property-7, $property-8, $property-9, $property-10)
+	transition-property: color, background-color, border;
+	//Instead of the line below you could use @include transition-timing-function($function-1, $function-2, $function-3, $function-4, $function-5, $function-6, $function-7, $function-8, $function-9, $function-10)
+	transition-timing-function: ease-in-out;
+	&:hover {
+		color: $color_martini_approx;
+		text-decoration: none;
+	}
+	&.edit-profile-sidebar {
+		background: $color_apple_approx;
+		text-align: center;
+		z-index: 8;
+		position: absolute;
+		top: 14px;
+		right: 14px;
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 40px;
+		width: 36px;
+		height: 36px;
+		line-height: 36px;
+		font-size: 15px;
+		color: $white;
+		//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		box-shadow: 0 2px 14px $color_apple_40_approx;
+		&:hover {
+			background: $color_martini_approx;
+		}
+	}
+	&.not-a-member-pro {
+		display: block;
+		padding: 12px 20px;
+		background: $color_martini_approx;
+		text-align: center;
+		color: $white;
+		letter-spacing: 0.02em;
+		font-family: $font_0, $font_1;
+		&:hover {
+			@extend %extend_2;
+		}
+		span {
+			font-weight: 700;
+		}
+	}
+	&.progression-studios-slider-play-btn {
+		z-index: 50;
+		position: absolute;
+		display: block;
+		cursor: pointer;
+		right: 18%;
+		text-align: center;
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 100px;
+		top: 50%;
+		margin-top: -50px;
+		width: 100px;
+		height: 100px;
+		line-height: 100px;
+		color: $white;
+		font-size: 36px;
+		border: 2px solid $white;
+		background: $black_5;
+		//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		box-shadow: 0 0 20px $black_15;
+		i {
+			position: relative;
+			left: 3px;
+		}
+	}
+	&.movie-detail-media-link {
+		display: block;
+		color: $white;
+		text-align: center;
+		h6 {
+			position: absolute;
+			bottom: -2px;
+			//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+			border-radius: 5px;
+			margin: 0;
+			width: 100%;
+			color: $white;
+			font-weight: 400;
+			font-size: 13px;
+			padding: 20px 0 10px;
+			background: linear-gradient(to bottom, rgba(0,0,0,0) 0,$black_88 100%);
+		}
+	}
+	&.movie-detail-header-play-btn {
+		z-index: 50;
+		position: absolute;
+		display: block;
+		cursor: pointer;
+		left: 50%;
+		text-align: center;
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 100px;
+		top: 50%;
+		margin-top: -105px;
+		margin-left: -55px;
+		width: 110px;
+		height: 110px;
+		line-height: 110px;
+		color: $white;
+		font-size: 46px;
+		border: 3px solid $white;
+		background: $black_6;
+		//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		box-shadow: 0 0 20px $black_15;
+		i {
+			position: relative;
+			left: 3px;
+		}
+	}
+}
+ul {
+	&#sidebar-reviews-pro {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		li {
+			margin: 0 0 20px 0;
+			padding: 0;
+			border-bottom: 1px dotted $color_iron_approx;
+			font-size: 13px;
+			line-height: 1.6;
+			.spoiler-review {
+				color: $color_apple_approx;
+			}
+			p {
+				margin-bottom: 18px;
+			}
+			&:last-child {
+				border: none;
+				margin-bottom: 30px;
+			}
+		}
+		h6 {
+			font-size: 14px;
+			font-weight: 400;
+			margin-bottom: 3px;
+		}
+		.spoiler-review {
+			text-transform: uppercase;
+			font-size: 11px;
+			padding: 0 0 4px 0;
+		}
+		.sidebar-review-time {
+			color: $color_gray_approx;
+			padding-bottom: 10px;
+			font-size: 12px;
+		}
+	}
+	&#profile-watched-stats {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		text-align: center;
+		display: table;
+		table-layout: fixed;
+		width: 100%;
+		span {
+			color: $color_apple_approx;
+			font-size: 26px;
+			display: block;
+			font-weight: 700;
+			padding-bottom: 4px;
+		}
+		li {
+			margin: 0;
+			padding: 16px 0;
+			line-height: 1;
+			display: table-cell;
+			border: 1px solid $color_mercury_approx;
+			color: $color_boulder_approx;
+			font-size: 12px;
+			&:first-child {
+				border-right: none;
+			}
+			&:last-child {
+				border-left: none;
+			}
+		}
+	}
+	&.page-numbers {
+		margin: 20px auto 45px auto;
+		text-align: center;
+		padding: 0;
+		list-style: none;
+		li {
+			display: inline;
+			margin: 0;
+			padding: 0;
+			a {
+				font: 400 13px/38px $font_0, $font_1;
+				display: inline-block;
+				margin: 0 4px 5px;
+				width: 38px;
+				height: 38px;
+				color: $color_martini_approx;
+				background: $black_3;
+				border: 1px solid $black_9;
+				//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+				border-radius: 5px;
+				&.next {
+					border-color: rgba(0,0,0, 0);
+					background: rgba(0,0,0, 0);
+					color: $color_dove_gray_approx;
+					&:hover {
+						color: $color_apple_approx;
+					}
+				}
+				&.previous {
+					border-color: rgba(0,0,0, 0);
+					background: rgba(0,0,0, 0);
+					color: $color_dove_gray_approx;
+					&:hover {
+						color: $color_apple_approx;
+					}
+				}
+				&:hover {
+					background: $black_5;
+					border-color: $black_18;
+				}
+			}
+			span.page-numbers {
+				font: 400 13px/38px $font_0, $font_1;
+				display: inline-block;
+				margin: 0 4px 5px;
+				width: 38px;
+				height: 38px;
+				color: $color_martini_approx;
+				background: $black_3;
+				border: 1px solid $black_9;
+				//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+				border-radius: 5px;
+				&.current {
+					@extend %extend_2;
+				}
+			}
+		}
+	}
+	&.welcome-features {
+		list-style: none;
+		margin: 0 auto;
+		padding: 0;
+		max-width: 460px;
+		li {
+			font: 13px $font_0, $font_1;
+			float: left;
+			width: 50%;
+			color: $black_50;
+			margin-bottom: 6px;
+			padding: 0 0 0 26px;
+			position: relative;
+			&:before {
+				color: $color_apple_approx;
+				font-family: $font_4;
+				content: "\f00c";
+				font-weight: 900;
+				display: inline-block;
+				position: absolute;
+				left: 0;
+			}
+		}
+	}
+	&.checkmark-list-pro {
+		font-family: $font_0, $font_1;
+		color: $color_mine_shaft_approx;
+		margin-left: 0;
+		padding-left: 0;
+		li {
+			list-style: none;
+			position: relative;
+			padding-left: 26px;
+			margin-bottom: 6px;
+			&:before {
+				color: $color_apple_approx;
+				font-family: $font_4;
+				content: "\f00c";
+				font-weight: 900;
+				display: inline-block;
+				position: absolute;
+				left: 0;
+			}
+		}
+	}
+	&.registration-genres-choice {
+		margin: 0;
+		padding: 0;
+		text-align: center;
+		list-style: none;
+		li {
+			margin: 0;
+			padding: 0;
+			float: left;
+			width: calc(16.5% - 10px);
+			padding: 10px;
+			margin: 5px;
+			border: 2px solid rgba(0,0,0, 0);
+			//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+			border-radius: 4px;
+			position: relative;
+			cursor: pointer;
+			//Instead of the line below you could use @include transition-duration($duration-1, $duration-2, $duration-3, $duration-4, $duration-5, $duration-6, $duration-7, $duration-8, $duration-9, $duration-10)
+			transition-duration: 250ms;
+			//Instead of the line below you could use @include transition-property($property-1, $property-2, $property-3, $property-4, $property-5, $property-6, $property-7, $property-8, $property-9, $property-10)
+			transition-property: all;
+			//Instead of the line below you could use @include transition-timing-function($function-1, $function-2, $function-3, $function-4, $function-5, $function-6, $function-7, $function-8, $function-9, $function-10)
+			transition-timing-function: ease-in-out;
+			i {
+				position: absolute;
+				top: 5px;
+				right: 5px;
+				opacity: 0;
+				font-size: 12px;
+				font-size: 16px;
+				//Instead of the line below you could use @include transition-duration($duration-1, $duration-2, $duration-3, $duration-4, $duration-5, $duration-6, $duration-7, $duration-8, $duration-9, $duration-10)
+				transition-duration: 250ms;
+				//Instead of the line below you could use @include transition-property($property-1, $property-2, $property-3, $property-4, $property-5, $property-6, $property-7, $property-8, $property-9, $property-10)
+				transition-property: all;
+				//Instead of the line below you could use @include transition-timing-function($function-1, $function-2, $function-3, $function-4, $function-5, $function-6, $function-7, $function-8, $function-9, $function-10)
+				transition-timing-function: ease-in-out;
+				&.fa-check-circle {
+					color: $color_apple_approx;
+				}
+			}
+			&.active {
+				border-color: $color_apple_approx;
+				i {
+					opacity: 1;
+				}
+			}
+			&:hover {
+				border-color: $color_apple_approx;
+			}
+			img {
+				margin-bottom: 8px;
+				width: 60px;
+			}
+			h6 {
+				font-size: 13px;
+				font-weight: 400;
+				color: $color_dove_gray_approx;
+				margin-bottom: 0;
+			}
+		}
+	}
+	&.dashboard-genres-pro {
+		list-style: none;
+		margin: 0 0 40px 0;
+		padding: 22px 30px;
+		text-align: center;
+		border-bottom: 1px solid $color_mercury_approx;
+		overflow: hidden;
+		display: table;
+		table-layout: fixed;
+		width: 100%;
+		li {
+			margin: 0;
+			padding: 0;
+			display: table-cell;
+			padding: 10px 6px;
+			border: 2px solid rgba(0,0,0, 0);
+			//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+			border-radius: 4px;
+			position: relative;
+			cursor: pointer;
+			&.active {
+				border-color: $color_apple_approx;
+			}
+			img {
+				margin-bottom: 8px;
+				width: 60px;
+			}
+			h6 {
+				font-size: 12px;
+				font-weight: 400;
+				color: $color_dove_gray_approx;
+				margin-bottom: 0;
+			}
+		}
+	}
+	&#registration-steps-pro {
+		list-style: none;
+		margin: 0;
+		padding: 60px 0 100px;
+		li {
+			float: left;
+			margin: 0;
+			width: 25%;
+			border-bottom: 1px solid $color_alto_approx;
+			//Instead of the line below you could use @include transition-duration($duration-1, $duration-2, $duration-3, $duration-4, $duration-5, $duration-6, $duration-7, $duration-8, $duration-9, $duration-10)
+			transition-duration: 250ms;
+			//Instead of the line below you could use @include transition-property($property-1, $property-2, $property-3, $property-4, $property-5, $property-6, $property-7, $property-8, $property-9, $property-10)
+			transition-property: all;
+			//Instead of the line below you could use @include transition-timing-function($function-1, $function-2, $function-3, $function-4, $function-5, $function-6, $function-7, $function-8, $function-9, $function-10)
+			transition-timing-function: ease-in-out;
+			&:hover {
+				border-color: $color_apple_approx;
+			}
+			&.current-menu-item {
+				border-color: $color_apple_approx;
+				.registration-step-circle-icon {
+					background: $color_apple_approx;
+					&:before {
+						border-top-color: $color_apple_approx;
+					}
+				}
+			}
+			a {
+				display: block;
+				padding: 0 0 23px 0;
+			}
+		}
+	}
+	&#friends-activity-profiles {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		li {
+			float: left;
+			display: block;
+			margin: 0 12px 0 0;
+			padding: 0;
+			img {
+				//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+				border-radius: 30px;
+				width: 34px;
+			}
+			&.friends-activity-profiles-more a {
+				background: $color_apple_approx;
+				text-align: center;
+				display: inline-block;
+				//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+				border-radius: 30px;
+				width: 34px;
+				height: 34px;
+				line-height: 34px;
+				font-size: 11px;
+				font-weight: 700;
+				color: $white;
+				&:hover {
+					@extend %extend_3;
+				}
+			}
+		}
+	}
+	&.dashboard-sub-menu {
+		list-style: none;
+		margin: 35px 0 30px;
+		padding: 0;
+		li {
+			display: inline;
+			padding: 0;
+			margin: 0;
+			a {
+				font: 16px $font_0, $font_1;
+				margin: 0 40px 5px 0;
+				display: inline-block;
+				position: relative;
+				color: $color_silver_chalice_approx;
+				padding-bottom: 6px;
+				&:after {
+					display: block;
+					content: "";
+					position: absolute;
+					bottom: 0;
+					left: 0;
+					width: 100%;
+					height: 3px;
+					background: rgba(0,0,0, 0);
+				}
+				&:hover {
+					color: $color_mine_shaft_approx;
+				}
+			}
+			&.current a {
+				color: $color_mine_shaft_approx;
+				&:after {
+					background: $color_apple_approx;
+				}
+			}
+			&:last-child a {
+				margin-right: 0;
+			}
+		}
+	}
+	&.progression-studios-slider-rating {
+		list-style: none;
+		margin: 0 0 8px 0;
+		padding: 0;
+		li {
+			display: inline-block;
+			line-height: 1;
+			margin: 0 7px 5px 0;
+			padding: 7px;
+			//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+			border-radius: 5px;
+			font-size: 11px;
+			font-weight: 700;
+			border: 2px solid $color_martini_approx;
+			color: $color_martini_approx;
+		}
+	}
+	&.progression-studios-slider-meta {
+		list-style: none;
+		margin: 0 0 15px 0;
+		padding: 0;
+		li {
+			display: inline;
+			margin: 0;
+			padding: 0;
+			color: $color_silver_chalice_approx;
+			font-size: 14px;
+			&:after {
+				content: "|";
+				padding: 0 14px;
+			}
+			&:last-child:after {
+				display: none;
+			}
+		}
+	}
+	&.progression-studios-staring-slider {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		li {
+			display: inline-block;
+			margin: 0 5px 5px 0;
+			padding: 0;
+			width: 32px;
+			img {
+				//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+				border-radius: 60px;
+			}
+		}
+	}
+	&#profile-favorite-genres {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		li {
+			float: left;
+			margin: 0;
+			width: 25%;
+			padding: 0 5px;
+		}
+	}
+	&#friends-activity-feed {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		li {
+			line-height: 1.4;
+			position: relative;
+			font-size: 13px;
+			color: $color_mine_shaft_approx;
+			margin: 0 0 0 14px;
+			padding: 0 0 30px 25px;
+			border-left: 1px solid $mercury;
+			&:last-child {
+				padding-bottom: 10px;
+			}
+			&:after {
+				position: absolute;
+				content: "";
+				display: block;
+				width: 15px;
+				background: $alabaster;
+				height: 34px;
+				top: -5px;
+				left: -6px;
+			}
+			img {
+				position: absolute;
+				z-index: 10;
+				left: -14px;
+				width: 24px;
+				//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+				border-radius: 24px;
+			}
+		}
+	}
+	&#mobile-menu-pro {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		display: block !important;
+		overflow: hidden;
+		width: 100%;
+		[class^="icon-"] {
+			font-size: 22px;
+			display: inline-block;
+			width: 30px;
+			position: relative;
+			&:before {
+				position: absolute;
+				top: -17px;
+			}
+		}
+		[class*=" icon-"] {
+			font-size: 22px;
+			display: inline-block;
+			width: 30px;
+			position: relative;
+			&:before {
+				position: absolute;
+				top: -17px;
+			}
+		}
+		i {
+			width: 30px;
+			margin-bottom: -10px;
+			font-size: 18px;
+			text-align: center;
+		}
+		li {
+			position: relative;
+			display: inline-block;
+			margin: 0;
+			padding: 0;
+			display: block;
+			width: 100%;
+			//Instead of the line below you could use @include box-sizing($bs)
+			box-sizing: border-box;
+			a {
+				line-height: 1;
+				color: $color_mine_shaft_approx;
+				font-size: 13px;
+				padding: 20px;
+				display: block;
+				border-bottom: 1px solid $black_5;
+				//Instead of the line below you could use @include box-sizing($bs)
+				box-sizing: border-box;
+			}
+			li {
+				a {
+					padding-left: 30px;
+				}
+				li {
+					a {
+						padding-left: 35px;
+					}
+					li a {
+						padding-left: 40px;
+					}
+				}
+			}
+			.sub-collapser {
+				background: none;
+				position: absolute;
+				right: 0;
+				top: 0;
+				width: 50px;
+				text-align: center;
+				z-index: 999;
+				cursor: pointer;
+				height: 53px;
+				> i {
+					display: none;
+				}
+			}
+			ul {
+				list-style: none;
+				margin: 0;
+				padding-left: 0;
+				li {
+					background: $concrete;
+				}
+			}
+			> ul {
+				display: none;
+				position: absolute;
+				left: 0;
+				top: 100%;
+				z-index: 999;
+				width: 100%;
+				> li ul {
+					display: none;
+					position: absolute;
+					left: 100%;
+					top: 0;
+					z-index: 999;
+					width: 100%;
+				}
+			}
+		}
+		span.user-notification-count {
+			right: auto;
+			top: 12px;
+			left: 34px;
+		}
+		a i {
+			padding-right: 4px;
+		}
+		&.collapsed li {
+			.sub-collapser {
+				&:before {
+					font: 900 13px/53px "Font Awesome 5 Free";
+					position: absolute;
+					top: 0;
+					left: 0;
+					border: none;
+					content: "\f107";
+					text-align: center;
+					width: 50px;
+					background: $concrete;
+				}
+				&.expanded {
+					//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+					transform: rotate(180deg);
+				}
+			}
+			> ul {
+				display: none;
+				position: static;
+			}
+		}
+	}
+	&.social-icons-pro {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		li {
+			display: inline;
+			margin: 0;
+			padding: 0;
+			a {
+				display: inline-block;
+				text-align: center;
+				//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+				border-radius: 50px;
+				margin: 0 4px;
+				border: 2px solid $black_8;
+				width: 34px;
+				height: 34px;
+				line-height: 32px;
+				font-size: 12px;
+				color: $color_gray_approx;
+				&:hover {
+					background: $color_gray_approx;
+					border-color: $color_gray_approx;
+					color: $white;
+				}
+			}
+			&:last-child a {
+				margin-right: 0;
+			}
+			&.facebook-color a {
+				color: $color_chambray_approx;
+				&:hover {
+					background: $color_chambray_approx;
+					border-color: $color_chambray_approx;
+					color: $white;
+				}
+			}
+			&.google-color a {
+				color: $color_punch_approx;
+				&:hover {
+					background: $color_punch_approx;
+					border-color: $color_punch_approx;
+					color: $white;
+				}
+			}
+			&.linkedin-color a {
+				color: $color_deep_cerulean_approx;
+				&:hover {
+					background: $color_deep_cerulean_approx;
+					border-color: $color_deep_cerulean_approx;
+					color: $white;
+				}
+			}
+			&.twitter-color a {
+				color: $color_picton_blue_approx;
+				&:hover {
+					background: $color_picton_blue_approx;
+					border-color: $color_picton_blue_approx;
+					color: $white;
+				}
+			}
+			&.youtube-color a {
+				color: $red;
+				&:hover {
+					background: $red;
+					border-color: $red;
+					color: $white;
+				}
+			}
+			&.vimeo-color a {
+				color: $color_conifer_approx;
+				&:hover {
+					background: $color_conifer_approx;
+					border-color: $color_conifer_approx;
+					color: $white;
+				}
+			}
+			&.instagram-color a {
+				color: $color_roman_approx;
+				&:hover {
+					background: $color_roman_approx;
+					border-color: $color_roman_approx;
+					color: $white;
+				}
+			}
+		}
+	}
+	&.registration-invite-friends-list li {
+		float: left;
+		width: calc(33.3% - 8px);
+		padding: 4px;
+		margin: 4px;
+		border: 2px solid rgba(0,0,0, 0);
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 4px;
+		position: relative;
+		cursor: pointer;
+		//Instead of the line below you could use @include transition-duration($duration-1, $duration-2, $duration-3, $duration-4, $duration-5, $duration-6, $duration-7, $duration-8, $duration-9, $duration-10)
+		transition-duration: 250ms;
+		//Instead of the line below you could use @include transition-property($property-1, $property-2, $property-3, $property-4, $property-5, $property-6, $property-7, $property-8, $property-9, $property-10)
+		transition-property: all;
+		//Instead of the line below you could use @include transition-timing-function($function-1, $function-2, $function-3, $function-4, $function-5, $function-6, $function-7, $function-8, $function-9, $function-10)
+		transition-timing-function: ease-in-out;
+		i {
+			position: absolute;
+			top: 5px;
+			right: 5px;
+			opacity: 0;
+			font-size: 12px;
+			//Instead of the line below you could use @include transition-duration($duration-1, $duration-2, $duration-3, $duration-4, $duration-5, $duration-6, $duration-7, $duration-8, $duration-9, $duration-10)
+			transition-duration: 250ms;
+			//Instead of the line below you could use @include transition-property($property-1, $property-2, $property-3, $property-4, $property-5, $property-6, $property-7, $property-8, $property-9, $property-10)
+			transition-property: all;
+			//Instead of the line below you could use @include transition-timing-function($function-1, $function-2, $function-3, $function-4, $function-5, $function-6, $function-7, $function-8, $function-9, $function-10)
+			transition-timing-function: ease-in-out;
+			&.fa-check-circle {
+				color: $color_apple_approx;
+			}
+		}
+		&.active {
+			border-color: $color_apple_approx;
+			i {
+				opacity: 1;
+			}
+		}
+		&:hover {
+			border-color: $color_apple_approx;
+		}
+		img {
+			float: left;
+			//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+			border-radius: 30px;
+			margin-right: 12px;
+		}
+		h6 {
+			font-weight: 400;
+			margin: 4px 0 0;
+			font-size: 13px;
+		}
+		.friends-social-media {
+			font-size: 13px;
+			color: $black_55;
+		}
+	}
+	&#vertical-sidebar-nav.sf-menu {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		font-weight: 400;
+		font-family: $font_0, $font_1;
+		letter-spacing: 0.02em;
+		li {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			text-align: center;
+			width: 100%;
+			a {
+				display: block;
+				font-size: 12px;
+				color: $color_gray_approx;
+				padding: 26px 0;
+				border-bottom: 1px solid $color_mercury_approx;
+				&:before {
+					display: none;
+				}
+			}
+			&.sfHover {
+				a {
+					color: $color_apple_approx;
+				}
+				li {
+					a {
+						background: rgba(0,0,0, 0);
+						color: $white_60;
+						&:hover {
+							color: $white;
+							background: rgba(0,0,0, 0);
+						}
+					}
+					&.sfHover {
+						li {
+							a {
+								background: rgba(0,0,0, 0);
+								color: $white_60;
+							}
+							&.sfHover {
+								li {
+									a {
+										background: rgba(0,0,0, 0);
+										color: $white_60;
+									}
+									&.sfHover {
+										li {
+											a {
+												background: rgba(0,0,0, 0);
+												color: $white_60;
+											}
+											&.sfHover {
+												li {
+													a {
+														background: rgba(0,0,0, 0);
+														color: $white_60;
+													}
+													&.sfHover a {
+														color: $white;
+														background: rgba(0,0,0, 0);
+													}
+												}
+												a {
+													color: $white;
+													background: rgba(0,0,0, 0);
+													&:hover {
+														color: $white;
+														background: rgba(0,0,0, 0);
+													}
+												}
+											}
+										}
+										a {
+											color: $white;
+											background: rgba(0,0,0, 0);
+											&:hover {
+												color: $white;
+												background: rgba(0,0,0, 0);
+											}
+										}
+									}
+								}
+								a {
+									color: $white;
+									background: rgba(0,0,0, 0);
+									&:hover {
+										color: $white;
+										background: rgba(0,0,0, 0);
+									}
+								}
+							}
+						}
+						a {
+							color: $white;
+							background: rgba(0,0,0, 0);
+						}
+					}
+					li {
+						li {
+							li {
+								a:hover {
+									color: $white;
+									background: rgba(0,0,0, 0);
+								}
+								li a:hover {
+									color: $white;
+									background: rgba(0,0,0, 0);
+								}
+							}
+							a:hover {
+								color: $white;
+								background: rgba(0,0,0, 0);
+							}
+						}
+						a:hover {
+							color: $white;
+							background: rgba(0,0,0, 0);
+						}
+					}
+				}
+			}
+			li {
+				a {
+					text-transform: normal;
+					text-align: left;
+					font-size: 13px;
+					padding: 14px 10px 14px 0;
+					border-bottom: 1px solid $white_8;
+				}
+				&:last-child {
+					li {
+						a {
+							border-bottom: 1px solid $white_8;
+						}
+						&:last-child a {
+							border: none;
+						}
+					}
+					a {
+						border: none;
+					}
+				}
+				.sf-with-ul:after {
+					font-size: 11px;
+				}
+			}
+			span {
+				display: block;
+				font-size: 40px;
+				margin-bottom: 7px;
+			}
+			ul {
+				left: 100%;
+				top: 0;
+				margin: 0;
+			}
+			&.current-menu-item a {
+				color: $color_apple_approx;
+			}
+		}
+		ul {
+			font-weight: 300;
+			background: $color_mine_shaft_approx;
+			border: 1px solid $white_8;
+			border-top: none;
+			padding: 18px 32px;
+			margin-left: 10px;
+			ul {
+				margin-left: 32px;
+			}
+		}
+		a:hover {
+			color: $color_apple_approx;
+		}
+		.sf-with-ul:after {
+			content: "\f105";
+			font-size: 12px;
+		}
+		&.sf-arrows ul .sf-with-ul {
+			padding-right: 30px;
+		}
+	}
+}
+.item-playlist-text-skrn {
+	text-align: center;
+	position: relative;
+	padding: 38px 24px 20px;
+	h5 {
+		font-size: 14px;
+		font-weight: 400;
+		margin-bottom: 6px;
+		a {
+			color: $color_mine_shaft_approx;
+			&:hover {
+				color: $color_apple_approx;
+			}
+		}
+	}
+	img {
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 80px;
+		width: 46px;
+		margin-left: -23px;
+		border: 3px solid $white;
+		position: absolute;
+		top: -22px;
+		left: 50%;
+	}
+	h6 {
+		font-weight: 400;
+		color: $color_silver_chalice_approx;
+		font-size: 12px;
+	}
+}
+.item-listing-text-skrn {
+	padding: 0 24px;
+	height: 80px;
+	display: table;
+	width: 100%;
+	h6 {
+		font-size: 14px;
+		font-weight: 400;
+		line-height: 1.2rem;
+		margin-top: 4px;
+		float: left;
+		width: calc(100% - 50px);
+		a {
+			color: $color_mine_shaft_approx;
+			&:hover {
+				color: $color_apple_approx;
+			}
+		}
+	}
+	.circle-rating-pro {
+		margin-bottom: -5px;
+	}
+	&.item-listing-movie-casting {
+		display: block;
+		width: auto;
+		text-align: center;
+		padding: 20px 10px;
+		height: auto;
+		h6 {
+			display: block;
+			margin: 0 auto;
+			float: none;
+			width: auto;
+		}
+	}
+}
+.payment-method-container {
+	margin-top: 25px;
+	font-size: 14px;
+	color: $color_boulder_approx;
+	h5 {
+		font-weight: 400;
+		font-size: 19px;
+		margin-bottom: 20px;
+		sup {
+			color: $color_apple_approx;
+			font-size: 11px;
+			padding-left: 6px;
+		}
+	}
+	strong {
+		color: $color_mine_shaft_approx;
+	}
+	img {
+		width: 460px;
+	}
+	h6 {
+		font-weight: 400;
+		font-size: 17px;
+		margin-bottom: 20px;
+	}
+}
+.pricing-plans-page-container {
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 6px;
+	background: $white;
+	border: 1px solid $black_5;
+	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: -15px 26px 30px $black_9;
+	text-align: center;
+	max-width: 850px;
+	margin: 0 auto;
+	h2 {
+		color: $color_apple_approx;
+		font-size: 40px;
+		margin-bottom: 25px;
+		sup {
+			font-size: 16px;
+			font-weight: 400;
+			top: -16px;
+			padding-right: 5px;
+		}
+		span {
+			font-size: 12px;
+			color: $color_martini_approx;
+			font-weight: 400;
+			letter-spacing: 0.02em;
+		}
+	}
+	.pricing-table-col {
+		padding: 70px 20px 40px;
+	}
+	h6 {
+		font-size: 13px;
+		letter-spacing: 0.06em;
+		margin-bottom: 25px;
+	}
+	ul {
+		list-style: none;
+		margin: 0 0 35px 0;
+		padding: 0;
+		li {
+			font: 300 14px $font_0, $font_1;
+			color: $color_mine_shaft_65_approx;
+			margin-bottom: 10px;
+		}
+	}
+}
+.current-plan-account {
+	padding-top: 15px;
+	h2 {
+		color: $color_apple_approx;
+		font-size: 50px;
+		margin-bottom: 35px;
+		sup {
+			font-size: 17px;
+			font-weight: 400;
+			top: -22px;
+			padding-right: 5px;
+		}
+		span {
+			font-size: 15px;
+			color: $color_martini_approx;
+			font-weight: 400;
+		}
+	}
+	h4 {
+		font-size: 14px;
+		letter-spacing: 0.1em;
+	}
+	h5 {
+		font-size: 14px;
+		font-weight: 400;
+	}
+	.current-plan-billing {
+		color: $color_martini_approx;
+		font-weight: 400;
+		font-size: 13px;
+		font-style: italic;
+		margin-bottom: 10px;
+	}
+	ul {
+		list-style: none;
+		margin: 0 0 30px 0;
+		padding: 0;
+		font-size: 14px;
+		color: $color_gray_approx;
+		li {
+			padding: 0;
+			margin: 0 0 5px 0;
+		}
+	}
+}
+.progression-studios-slider-more-options {
+	float: left;
+	cursor: pointer;
+	margin: 0;
+	position: relative;
+	padding-right: 12px;
+	ul {
+		position: absolute;
+		left: 100%;
+		top: 0;
+		width: 170px;
+		background: $white;
+		border: 1px solid $black_5;
+		//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		box-shadow: 0 0 10px $black_6;
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 5px;
+		list-style: none;
+		margin: 0;
+		padding: 16px 0 0;
+		opacity: 0;
+		visibility: hidden;
+		li {
+			margin: 0;
+			padding: 0 24px;
+			&:last-child {
+				border-top: 1px solid $color_mercury_approx;
+				margin-top: 10px;
+				a {
+					color: $color_silver_chalice_approx;
+					margin-bottom: 0;
+					padding-top: 11px;
+					padding-bottom: 11px;
+					&:hover {
+						color: $color_apple_approx;
+					}
+				}
+			}
+			a {
+				display: block;
+				margin-bottom: 4px;
+				color: $color_mine_shaft_approx;
+				font-size: 13px;
+				&:hover {
+					color: $color_apple_approx;
+				}
+			}
+		}
+	}
+	i {
+		height: 50px;
+		width: 50px;
+		line-height: 50px;
+		text-align: center;
+		font-size: 13px;
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 60px;
+		border: 2px solid $color_silver_chalice_approx;
+		color: $color_silver_chalice_approx;
+		//Instead of the line below you could use @include transition-duration($duration-1, $duration-2, $duration-3, $duration-4, $duration-5, $duration-6, $duration-7, $duration-8, $duration-9, $duration-10)
+		transition-duration: 250ms;
+		//Instead of the line below you could use @include transition-property($property-1, $property-2, $property-3, $property-4, $property-5, $property-6, $property-7, $property-8, $property-9, $property-10)
+		transition-property: all;
+		//Instead of the line below you could use @include transition-timing-function($function-1, $function-2, $function-3, $function-4, $function-5, $function-6, $function-7, $function-8, $function-9, $function-10)
+		transition-timing-function: ease-in-out;
+		&:hover {
+			border-color: $color_gray_approx;
+			color: $color_gray_approx;
+		}
+	}
+	&.active {
+		i {
+			border-color: $color_gray_approx;
+			color: $color_gray_approx;
+		}
+		ul {
+			//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+			transform: translateY(20px);
+			opacity: 0;
+			visibility: visible;
+			animation-duration: 250ms;
+			animation-name: ProgressionMoveUp;
+			animation-timing-function: ease-in-out;
+			animation-fill-mode: forwards;
+		}
+	}
+	&.hide ul {
+		animation-duration: 200ms;
+		animation-name: ProgressionMoveOut;
+		animation-timing-function: ease-in-out;
+		animation-fill-mode: forwards;
+	}
+}
+#header-user-notification-list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	max-height: 240px;
+	overflow-y: auto;
+	li {
+		margin: 0;
+		padding: 0;
+		a {
+			font: 300 12px/1.5 'Montserrat', sans-serif;
+			display: block;
+			color: $color_gray_approx;
+			padding: 10px 20px 10px 64px;
+			position: relative;
+			&:hover {
+				color: $color_apple_approx;
+				background: $black_4;
+			}
+		}
+		img {
+			position: absolute;
+			left: 20px;
+			top: 12px;
+			//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+			border-radius: 40px;
+			width: 35px;
+			height: 35px;
+		}
+		.header-user-notify-time {
+			display: block;
+			color: $color_silver_approx;
+			padding-top: 5px;
+			font-size: 11px;
+		}
+	}
+}
+#header-user-profile-menu {
+	position: absolute;
+	right: 20px;
+	margin-top: 14px;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 6px;
+	border: 1px solid $black_12;
+	overflow: visible;
+	background: $white;
+	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: 0 15px 20px $black_5;
+	z-index: 50;
+	min-width: 180px;
+	opacity: 0;
+	visibility: hidden;
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		li {
+			margin: 0;
+			padding: 0;
+			a {
+				font: 300 13px $font_0, $font_1;
+				display: block;
+				color: $color_gray_approx;
+				padding: 10px 20px;
+				&:hover {
+					color: $color_apple_approx;
+					background: $black_4;
+				}
+			}
+			span {
+				font-size: 18px;
+				position: relative;
+				top: 2px;
+				margin-right: 8px;
+			}
+		}
+	}
+	&:after {
+		content: '';
+		display: block;
+		position: absolute;
+		right: 20px;
+		margin-top: -10px;
+		width: 0;
+		height: 0;
+		z-index: 30;
+		border-style: solid;
+		top: -9px;
+		border-color: transparent transparent $white transparent;
+		border-width: 10px;
+	}
+	&:before {
+		content: '';
+		display: block;
+		position: absolute;
+		right: 20px;
+		margin-top: -10px;
+		width: 0;
+		height: 0;
+		z-index: 30;
+		border-style: solid;
+		top: -10px;
+		border-color: transparent transparent $black_16 transparent;
+		border-width: 10px;
+	}
+}
+.welcome-page-styles {
+	.pricing-plans-headings {
+		margin-top: 0;
+		margin-bottom: 30px;
+	}
+	h3.welcome-plan-title {
+		font-size: 20px;
+		text-align: center;
+		margin: 30px 0;
+		font-weight: 600;
+		span {
+			color: $color_apple_approx;
+			font-weight: 700;
+		}
+	}
+	h6.welcome-style-summary {
+		font-size: 14px;
+		font-weight: 400;
+		color: $black_60;
+		text-align: center;
+		margin-bottom: 12px;
+	}
+}
+.billing-plan-container {
+	float: left;
+	margin-top: -4px;
+	h3 {
+		font-size: 20px;
+		text-transform: uppercase;
+		.total {
+			color: $color_apple_approx;
+			padding-right: 4px;
+		}
+		.duration {
+			color: $color_silver_chalice_approx;
+			font-size: 14px;
+			font-weight: 400;
+			text-transform: none;
+		}
+	}
+	h5 {
+		color: $color_silver_chalice_approx;
+		font-weight: 600;
+		font-size: 14px;
+		margin-bottom: 8px;
+		a {
+			text-decoration: underline;
+		}
+	}
+}
+.jumbotron-pro {
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 8px;
+	text-align: center;
+	padding-top: 24px;
+	padding-bottom: 20px;
+	border: 2px solid $color_mercury_approx;
+	background: $white;
+	position: relative;
+	//Instead of the line below you could use @include transition-duration($duration-1, $duration-2, $duration-3, $duration-4, $duration-5, $duration-6, $duration-7, $duration-8, $duration-9, $duration-10)
+	transition-duration: 250ms;
+	//Instead of the line below you could use @include transition-property($property-1, $property-2, $property-3, $property-4, $property-5, $property-6, $property-7, $property-8, $property-9, $property-10)
+	transition-property: all;
+	//Instead of the line below you could use @include transition-timing-function($function-1, $function-2, $function-3, $function-4, $function-5, $function-6, $function-7, $function-8, $function-9, $function-10)
+	transition-timing-function: ease-in-out;
+	[class^="icon-"] {
+		color: $color_apple_approx;
+		font-size: 45px;
+	}
+	[class*=" icon-"] {
+		color: $color_apple_approx;
+		font-size: 45px;
+	}
+	&.jumbotron-selected {
+		border-color: $color_apple_approx;
+	}
+	h6 {
+		padding-top: 10px;
+		font-size: 14px;
+	}
+	i.fa-check-circle {
+		color: $color_apple_approx;
+		position: absolute;
+		left: 10px;
+		top: 10px;
+		font-size: 18px;
+	}
+}
+#mobile-navigation-pro {
+	display: none;
+	line-height: 1;
+	position: relative;
+	z-index: 20;
+	background: $white;
+	border-bottom: 1px solid $black_10;
+	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: 0 15px 20px $black_5;
+	font-weight: 600;
+	font-family: $font_0, $font_1;
+	text-transform: uppercase;
+	letter-spacing: 0.04em;
+	li.current-menu-item a {
+		color: $color_apple_approx;
+	}
+}
+#search-mobile-nav-pro {
+	text-align: center;
+	input {
+		font: 400 13px $font_0, $font_1;
+		color: $color_mine_shaft_approx;
+		background: none;
+		width: calc(100% - 40px);
+		padding: 9px 15px 9px 64px;
+		border: none;
+		border: 2px solid $black_9;
+		margin: 15px auto;
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 30px;
+		background: $url_3 no-repeat 20px 13px/30px 17px;
+		//Instead of the line below you could use @include transition-duration($duration-1, $duration-2, $duration-3, $duration-4, $duration-5, $duration-6, $duration-7, $duration-8, $duration-9, $duration-10)
+		transition-duration: 250ms;
+		//Instead of the line below you could use @include transition-property($property-1, $property-2, $property-3, $property-4, $property-5, $property-6, $property-7, $property-8, $property-9, $property-10)
+		transition-property: all;
+		//Instead of the line below you could use @include transition-timing-function($function-1, $function-2, $function-3, $function-4, $function-5, $function-6, $function-7, $function-8, $function-9, $function-10)
+		transition-timing-function: ease-in-out;
+		&:focus {
+			border-color: $color_apple_approx;
+			outline: none;
+			//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+			box-shadow: none;
+		}
+	}
+}
+.registration-billing-form {
+	padding: 60px;
+	.jumbotron-pro {
+		cursor: pointer;
+		&:hover {
+			border-color: $color_apple_approx;
+		}
+		img {
+			margin-top: 10px;
+			margin-bottom: 15px;
+		}
+	}
+	.btn {
+		float: right;
+	}
+}
+.form-group-invite-friends {
+	margin-top: 25px;
+	background: $alabaster;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 10px;
+	padding: 30px;
+	::-webkit-scrollbar-thumb {
+		background: $color_apple_approx;
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 4px;
+	}
+	.registration-invite-friends-list {
+		list-style: none;
+		margin: 0;
+		padding: 0 30px 0 0;
+		max-height: 200px;
+		overflow-y: scroll;
+	}
+	::-webkit-scrollbar {
+		background: $black_6;
+		width: 7px;
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 4px;
+	}
+}
+.checkbox-pro-container {
+	font: 13px $font_0, $font_1;
+	display: block;
+	position: relative;
+	padding-left: 28px;
+	margin-bottom: 12px;
+	color: $color_boulder_approx;
+	cursor: pointer;
+	//Instead of the line below you could use @include user-select($select)
+	user-select: none;
+	.checkmark-pro {
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 18px;
+		width: 18px;
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 20px;
+		background: $white;
+		border: 1px solid $black_12;
+		&:after {
+			background: $color_apple_approx;
+			content: "";
+			position: absolute;
+			display: none;
+			left: 50%;
+			top: 50%;
+			margin-top: -3px;
+			margin-left: -3px;
+			width: 6px;
+			height: 6px;
+			//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+			border-radius: 30px;
+		}
+	}
+	input {
+		position: absolute;
+		opacity: 0;
+		cursor: pointer;
+		&:checked ~ .checkmark-pro {
+			background: $white;
+			&:after {
+				display: block;
+			}
+		}
+		~ .checkmark-pro {
+			//Instead of the line below you could use @include transition-duration($duration-1, $duration-2, $duration-3, $duration-4, $duration-5, $duration-6, $duration-7, $duration-8, $duration-9, $duration-10)
+			transition-duration: 250ms;
+			//Instead of the line below you could use @include transition-property($property-1, $property-2, $property-3, $property-4, $property-5, $property-6, $property-7, $property-8, $property-9, $property-10)
+			transition-property: all;
+			//Instead of the line below you could use @include transition-timing-function($function-1, $function-2, $function-3, $function-4, $function-5, $function-6, $function-7, $function-8, $function-9, $function-10)
+			transition-timing-function: ease-in-out;
+		}
+	}
+	&:hover input ~ .checkmark-pro {
+		background: $white;
+	}
+}
+.sf-menu {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	a {
+		display: block;
+		position: relative;
+		padding: .75em 1em;
+		text-decoration: none;
+		zoom: 1;
+		cursor: pointer;
+		color: $color_torea_bay_approx;
+		line-height: 1;
+		color: $color_mine_shaft_approx;
+		font-size: 13px;
+		padding: 37px 20px;
+		//Instead of the line below you could use @include transition-duration($duration-1, $duration-2, $duration-3, $duration-4, $duration-5, $duration-6, $duration-7, $duration-8, $duration-9, $duration-10)
+		transition-duration: 250ms;
+		//Instead of the line below you could use @include transition-property($property-1, $property-2, $property-3, $property-4, $property-5, $property-6, $property-7, $property-8, $property-9, $property-10)
+		transition-property: padding-top, padding-bottom, color, background-color, width;
+		//Instead of the line below you could use @include transition-timing-function($function-1, $function-2, $function-3, $function-4, $function-5, $function-6, $function-7, $function-8, $function-9, $function-10)
+		transition-timing-function: ease-in-out;
+		&:before {
+			@extend %extend_2;
+			content: "";
+			display: block;
+			position: absolute;
+			left: 20px;
+			margin-top: 18px;
+			//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+			border-radius: 6px;
+			height: 2px;
+			opacity: 0;
+			width: 100%;
+			width: calc(100% - 40px);
+			//Instead of the line below you could use @include transition-duration($duration-1, $duration-2, $duration-3, $duration-4, $duration-5, $duration-6, $duration-7, $duration-8, $duration-9, $duration-10)
+			transition-duration: 250ms;
+			//Instead of the line below you could use @include transition-property($property-1, $property-2, $property-3, $property-4, $property-5, $property-6, $property-7, $property-8, $property-9, $property-10)
+			transition-property: all;
+			//Instead of the line below you could use @include transition-timing-function($function-1, $function-2, $function-3, $function-4, $function-5, $function-6, $function-7, $function-8, $function-9, $function-10)
+			transition-timing-function: ease-in-out;
+		}
+		&:hover {
+			color: $color_mine_shaft_approx;
+			background: none;
+			&:before {
+				opacity: 1;
+			}
+		}
+	}
+	* {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+	li {
+		background: $color_periwinkle_approx;
+		white-space: nowrap;
+		background: none;
+		&.normal-item-pro {
+			position: relative;
+			li {
+				position: relative;
+			}
+			ul {
+				position: absolute;
+				display: none;
+				top: 100%;
+				left: 0;
+				z-index: 99;
+				ul {
+					top: 0;
+					left: 100%;
+				}
+			}
+		}
+		&:hover {
+			background: $color_hawkes_blue_approx;
+			background: none;
+			> ul {
+				display: block;
+			}
+		}
+		&.sfHover {
+			background: $color_hawkes_blue_approx;
+			background: none;
+			> ul {
+				display: block;
+			}
+			a {
+				color: $color_mine_shaft_approx;
+				background: none;
+				&:before {
+					opacity: 1;
+				}
+			}
+			li {
+				a {
+					background: rgba(0,0,0, 0);
+					color: $white_60;
+					&:hover {
+						color: $white;
+						background: rgba(0,0,0, 0);
+					}
+				}
+				&.sfHover {
+					li {
+						a {
+							background: rgba(0,0,0, 0);
+							color: $white_60;
+						}
+						&.sfHover {
+							li {
+								a {
+									background: rgba(0,0,0, 0);
+									color: $white_60;
+								}
+								&.sfHover {
+									li {
+										a {
+											background: rgba(0,0,0, 0);
+											color: $white_60;
+										}
+										&.sfHover {
+											li {
+												a {
+													background: rgba(0,0,0, 0);
+													color: $white_60;
+												}
+												&.sfHover a {
+													color: $white;
+													background: rgba(0,0,0, 0);
+												}
+											}
+											a {
+												color: $white;
+												background: rgba(0,0,0, 0);
+												&:hover {
+													color: $white;
+													background: rgba(0,0,0, 0);
+												}
+											}
+										}
+									}
+									a {
+										color: $white;
+										background: rgba(0,0,0, 0);
+										&:hover {
+											color: $white;
+											background: rgba(0,0,0, 0);
+										}
+									}
+								}
+							}
+							a {
+								color: $white;
+								background: rgba(0,0,0, 0);
+								&:hover {
+									color: $white;
+									background: rgba(0,0,0, 0);
+								}
+							}
+						}
+					}
+					a {
+						color: $white;
+						background: rgba(0,0,0, 0);
+					}
+				}
+				li {
+					li {
+						li {
+							a:hover {
+								color: $white;
+								background: rgba(0,0,0, 0);
+							}
+							li a:hover {
+								color: $white;
+								background: rgba(0,0,0, 0);
+							}
+						}
+						a:hover {
+							color: $white;
+							background: rgba(0,0,0, 0);
+						}
+					}
+					a:hover {
+						color: $white;
+						background: rgba(0,0,0, 0);
+					}
+				}
+			}
+		}
+		li {
+			a {
+				text-transform: normal;
+				font-size: 13px;
+				padding: 14px 10px 14px 0;
+				border-bottom: 1px solid $white_8;
+				&:before {
+					display: none;
+				}
+			}
+			&:last-child {
+				li {
+					a {
+						border-bottom: 1px solid $white_8;
+					}
+					&:last-child a {
+						border: none;
+					}
+				}
+				a {
+					border: none;
+				}
+			}
+			i {
+				font-size: 95%;
+			}
+		}
+		&.current-menu-item a {
+			color: $color_mine_shaft_approx;
+			background: none;
+			&:before {
+				opacity: 1;
+			}
+		}
+	}
+	> li {
+		float: left;
+	}
+	ul {
+		min-width: 10em;
+		font-weight: 300;
+		text-transform: none;
+		letter-spacing: 0;
+		background: $color_mine_shaft_approx;
+		border: 1px solid $white_8;
+		border-top: none;
+		padding: 18px 32px;
+		margin-left: 10px;
+		ul {
+			top: 0;
+			left: 100%;
+			margin-left: 32px;
+			li {
+				background: $color_polo_blue_approx;
+				background: none;
+			}
+		}
+		li {
+			background: $color_spindle_approx;
+			background: none;
+		}
+	}
+	i {
+		line-height: 1;
+		margin-right: 6px;
+		font-size: 90%;
+		position: relative;
+		margin-bottom: -2px;
+		margin-top: -2px;
+	}
+}
+.btn-green-pro {
+	@extend %extend_2;
+	&:hover {
+		@extend %extend_3;
+	}
+}
+.btn-header-pro {
+	margin-top: 20px;
+	float: right;
+	&:hover {
+		@extend %extend_2;
+	}
+	&.btn-green-pro {
+		margin-left: 12px;
+	}
+}
+#pro-scroll-top {
+	display: block;
+	position: fixed;
+	overflow: hidden;
+	white-space: nowrap;
+	visibility: hidden;
+	opacity: 0;
+	text-align: center;
+	z-index: 100;
+	padding: 0;
+	margin: 0;
+	bottom: 0;
+	right: 30px;
+	//Instead of the line below you could use @include border-top-left-radius($radius)
+	border-top-left-radius: 4px;
+	//Instead of the line below you could use @include border-top-right-radius($radius)
+	border-top-right-radius: 4px;
+	color: $white;
+	background: $black_30;
+	height: 31px;
+	width: 42px;
+	font-size: 12px;
+	//Instead of the line below you could use @include transition-duration($duration-1, $duration-2, $duration-3, $duration-4, $duration-5, $duration-6, $duration-7, $duration-8, $duration-9, $duration-10)
+	transition-duration: 250ms;
+	//Instead of the line below you could use @include transition-property($property-1, $property-2, $property-3, $property-4, $property-5, $property-6, $property-7, $property-8, $property-9, $property-10)
+	transition-property: all;
+	//Instead of the line below you could use @include transition-timing-function($function-1, $function-2, $function-3, $function-4, $function-5, $function-6, $function-7, $function-8, $function-9, $function-10)
+	transition-timing-function: ease-in-out;
+	&:hover {
+		@extend %extend_2;
+		height: 35px;
+	}
+	.fa-chevron-up {
+		position: absolute;
+		top: 10px;
+		left: 16px;
+	}
+	&.cd-is-visible {
+		visibility: visible;
+		opacity: 1;
+	}
+}
+::-moz-selection {
+	color: $white;
+	background: $color_apple_approx;
+}
+::selection {
+	color: $white;
+	background: $color_apple_approx;
+	h2 {
+		color: $white;
+		background: $color_apple_approx;
+	}
+}
+.btn-shadow-pro {
+	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: 0 12px 28px $color_apple_38_approx;
+	&:hover {
+		//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		box-shadow: 0 12px 28px $color_silver_chalice_38_approx;
+	}
+}
+#content-pro {
+	padding: 50px 0;
+}
+img {
+	max-width: 100%;
+	height: auto;
+}
+@media(min-width: 576px) {
+	.container {
+		max-width: 100%;
+	}
+}
+@media(min-width: 1200px) {
+	.container {
+		max-width: 1140px;
+	}
+}
+.noselect {
+	//Instead of the line below you could use @include user-select($select)
+	user-select: none;
+}
+header {
+	&#masthead-pro {
+		position: relative;
+		z-index: 50;
+		background: $white;
+		//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		box-shadow: 0 0 10px $black_6;
+		h1 {
+			line-height: 1;
+			font-size: 5px;
+			margin: 0 35px 0 0;
+			padding: 0;
+			float: left;
+			img {
+				width: 111px;
+				margin: 27px 0;
+			}
+		}
+		&:after {
+			display: block;
+			content: '';
+			position: relative;
+			margin-top: -1px;
+			bottom: 0;
+			height: 1px;
+			width: 100%;
+			z-index: 50;
+			background: $black_7;
+		}
+		#mobile-navigation-pro {
+			border-top: 1px solid $black_7;
+		}
+	}
+	&#videohead-pro {
+		height: 90px;
+		position: relative;
+		margin: 0;
+		padding: 0;
+		z-index: 110;
+		background: $white;
+		border-bottom: 1px solid $black_8;
+		#mobile-bars-icon-pro {
+			margin-right: 0;
+			padding: 36px 25px;
+		}
+	}
+}
+.sf-arrows {
+	.sf-with-ul {
+		padding-right: 2.5em;
+		padding-right: 36px;
+		&:after {
+			content: '';
+			position: absolute;
+			right: 1em;
+			margin-top: -3px;
+			height: 0;
+			width: 0;
+			border: 5px solid transparent;
+			border-top-color: $color_solitude_approx;
+			border-top-color: $white_50;
+			display: inline-block;
+			font-style: normal;
+			font-variant: normal;
+			text-rendering: auto;
+			font: normal 900 11px "Font Awesome 5 Free";
+			border: none;
+			content: "\f107";
+			top: 50%;
+			right: 28px;
+			margin-top: -7px;
+		}
+	}
+	> li {
+		&:hover > .sf-with-ul:after {
+			border-top-color: $white;
+		}
+		> .sf-with-ul:focus:after {
+			border-top-color: $white;
+		}
+	}
+	ul {
+		li {
+			&:hover > .sf-with-ul:after {
+				border-left-color: $white;
+			}
+			> .sf-with-ul:focus:after {
+				border-left-color: $white;
+			}
+		}
+		.sf-with-ul:after {
+			margin-right: -3px;
+			border-color: transparent transparent transparent $color_solitude_approx;
+			border-left-color: $white_50;
+			font: normal normal normal 10px/1 "Font Awesome 5 Free";
+			content: "\f105";
+			margin-top: -5px;
+			right: 14px;
+		}
+		.sfHover > .sf-with-ul:after {
+			border-left-color: $white;
+		}
+	}
+	> .sfHover > .sf-with-ul:after {
+		border-top-color: $white;
+	}
+}
+nav {
+	&#site-navigation-pro {
+		font-weight: 600;
+		font-family: $font_0, $font_1;
+		text-transform: uppercase;
+		letter-spacing: 0.04em;
+	}
+	&#sidebar-nav {
+		padding-top: 90px;
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 160px;
+		z-index: 25;
+		&.sticky-sidebar-js {
+			position: absolute;
+		}
+	}
+}
+#video-logo-background {
+	float: left;
+	a {
+		display: block;
+		height: 90px;
+		line-height: 90px;
+		text-align: center;
+		width: 160px;
+	}
+	&:after {
+		content: "";
+		display: block;
+		position: absolute;
+		left: 160px;
+		top: 0;
+		z-index: -1;
+		width: 10px;
+		height: 100%;
+		background: linear-gradient(to right, $black_3 0,rgba(0,0,0,0) 100%);
+	}
+	&:before {
+		content: "";
+		display: block;
+		position: absolute;
+		left: 160px;
+		width: 1px;
+		background: $black_4;
+		height: 100%;
+	}
+	img {
+		position: relative;
+		top: -2px;
+		left: 2px;
+		width: 95px;
+		text-align: center;
+		margin: 0;
+	}
+}
+#sidebar-bg {
+	&:before {
+		background: $white;
+		//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		box-shadow: 0 0 12px $black_8;
+		content: "";
+		display: block;
+		height: 100%;
+		min-height: 100%;
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 160px;
+		z-index: 1;
+	}
+	&:after {
+		content: "";
+		display: block;
+		position: fixed;
+		left: 160px;
+		width: 1px;
+		top: 0;
+		background: $black_4;
+		height: 100%;
+	}
+}
+main {
+	&#col-main {
+		margin-left: 160px;
+	}
+	&#col-main-with-sidebar {
+		margin-left: 460px;
+	}
+}
+.dashboard-container {
+	padding: 0 50px;
+}
+#content-sidebar-pro {
+	margin-left: 160px;
+	width: 300px;
+	float: left;
+	background: $alabaster;
+	&:after {
+		content: '';
+		position: fixed;
+		left: 160px;
+		width: 300px;
+		top: 0;
+		height: 100%;
+		background: $alabaster;
+		z-index: -1;
+		border-right: 1px solid $black_5;
+		//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		box-shadow: 0 0 15px $black_10;
+	}
+}
+.item-listing-container-skrn {
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 5px;
+	border: 1px solid $black_8;
+	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: 0 3px 8px $black_6;
+	margin-bottom: 30px;
+	img {
+		width: 100%;
+		//Instead of the line below you could use @include border-top-left-radius($radius)
+		border-top-left-radius: 5px;
+		//Instead of the line below you could use @include border-top-right-radius($radius)
+		border-top-right-radius: 5px;
+	}
+}
+.item-listing-text-skrn-vertical-align {
+	display: table-cell;
+	vertical-align: middle;
+	width: 100%;
+}
+.circle-rating-pro {
+	float: right;
+	position: relative;
+	span {
+		font: 400 11px/32px $font_0, $font_1;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 32px;
+		text-align: center;
+	}
+}
+.item-playlist-container-skrn {
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 5px;
+	border: 1px solid $black_8;
+	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: 0 3px 8px $black_6;
+	margin-bottom: 30px;
+	img {
+		width: 100%;
+		//Instead of the line below you could use @include border-top-left-radius($radius)
+		border-top-left-radius: 5px;
+		//Instead of the line below you could use @include border-top-right-radius($radius)
+		border-top-right-radius: 5px;
+	}
+}
+#header-user-profile {
+	float: right;
+	position: relative;
+	&.active {
+		#header-user-profile-click {
+			color: $color_dove_gray_approx;
+		}
+		#header-user-profile-menu {
+			//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+			transform: translateY(20px);
+			opacity: 0;
+			visibility: visible;
+			animation-duration: 250ms;
+			animation-name: ProgressionMoveUp;
+			animation-timing-function: ease-in-out;
+			animation-fill-mode: forwards;
+		}
+	}
+	img {
+		width: 40px;
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 50px;
+		margin-right: 6px;
+	}
+	#header-username {
+		display: inline-block;
+	}
+	i {
+		margin-left: 6px;
+	}
+	&.hide #header-user-profile-menu {
+		animation-duration: 200ms;
+		animation-name: ProgressionMoveOut;
+		animation-timing-function: ease-in-out;
+		animation-fill-mode: forwards;
+	}
+}
+#header-user-profile-click {
+	font: 400 13px $font_0, $font_1;
+	cursor: pointer;
+	color: $color_gray_approx;
+	padding: 25px 40px 25px 20px;
+	//Instead of the line below you could use @include transition-duration($duration-1, $duration-2, $duration-3, $duration-4, $duration-5, $duration-6, $duration-7, $duration-8, $duration-9, $duration-10)
+	transition-duration: 250ms;
+	//Instead of the line below you could use @include transition-property($property-1, $property-2, $property-3, $property-4, $property-5, $property-6, $property-7, $property-8, $property-9, $property-10)
+	transition-property: all;
+	//Instead of the line below you could use @include transition-timing-function($function-1, $function-2, $function-3, $function-4, $function-5, $function-6, $function-7, $function-8, $function-9, $function-10)
+	transition-timing-function: ease-in-out;
+	&:hover {
+		color: $color_dove_gray_approx;
+	}
+}
+#header-user-notification {
+	float: right;
+	position: relative;
+	&.active {
+		#header-user-notification-click {
+			color: $color_silver_chalice_approx;
+		}
+		#header-user-notification-menu {
+			//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+			transform: translateY(20px);
+			opacity: 0;
+			visibility: visible;
+			animation-duration: 250ms;
+			animation-name: ProgressionMoveUp;
+			animation-timing-function: ease-in-out;
+			animation-fill-mode: forwards;
+		}
+	}
+	&.hide #header-user-notification-menu {
+		animation-duration: 200ms;
+		animation-name: ProgressionMoveOut;
+		animation-timing-function: ease-in-out;
+		animation-fill-mode: forwards;
+	}
+}
+#header-user-notification-click {
+	position: relative;
+	color: $color_silver_approx;
+	padding: 20px 15px;
+	font-size: 28px;
+	cursor: pointer;
+	//Instead of the line below you could use @include transition-duration($duration-1, $duration-2, $duration-3, $duration-4, $duration-5, $duration-6, $duration-7, $duration-8, $duration-9, $duration-10)
+	transition-duration: 250ms;
+	//Instead of the line below you could use @include transition-property($property-1, $property-2, $property-3, $property-4, $property-5, $property-6, $property-7, $property-8, $property-9, $property-10)
+	transition-property: all;
+	//Instead of the line below you could use @include transition-timing-function($function-1, $function-2, $function-3, $function-4, $function-5, $function-6, $function-7, $function-8, $function-9, $function-10)
+	transition-timing-function: ease-in-out;
+	&:hover {
+		color: $color_silver_chalice_approx;
+	}
+	i {
+		position: relative;
+		top: -1px;
+	}
+}
+#header-user-notification-menu {
+	position: absolute;
+	right: -5px;
+	margin-top: 14px;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 6px;
+	border: 1px solid $black_12;
+	overflow: visible;
+	background: $white;
+	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: 0 15px 20px $black_5;
+	z-index: 50;
+	min-width: 280px;
+	opacity: 0;
+	visibility: hidden;
+	&:after {
+		content: '';
+		display: block;
+		position: absolute;
+		right: 20px;
+		margin-top: -10px;
+		width: 0;
+		height: 0;
+		z-index: 30;
+		border-style: solid;
+		top: -9px;
+		border-color: transparent transparent $white transparent;
+		border-width: 10px;
+	}
+	&:before {
+		content: '';
+		display: block;
+		position: absolute;
+		right: 20px;
+		margin-top: -10px;
+		width: 0;
+		height: 0;
+		z-index: 30;
+		border-style: solid;
+		top: -10px;
+		border-color: transparent transparent $black_16 transparent;
+		border-width: 10px;
+	}
+	h3 {
+		font-weight: 400;
+		font-size: 12px;
+		text-transform: uppercase;
+		padding: 20px 20px 18px 20px;
+		margin: 0;
+		border-bottom: 1px solid $black_4;
+	}
+}
+#video-search-header {
+	float: left;
+	height: 89px;
+	line-height: 89px;
+	position: relative;
+	input {
+		font: 400 15px $font_0, $font_1;
+		color: $color_mine_shaft_approx;
+		background: none;
+		padding: 10px 0 10px 108px;
+		border: none;
+		width: 380px;
+		&:focus {
+			outline: none;
+			//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+			box-shadow: none;
+		}
+	}
+	&.active {
+		#search-icon-more {
+			opacity: 1;
+		}
+		#video-search-header-filtering {
+			//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+			transform: translateY(20px);
+			opacity: 0;
+			visibility: visible;
+			animation-duration: 250ms;
+			animation-name: ProgressionMoveUp;
+			animation-timing-function: ease-in-out;
+			animation-fill-mode: forwards;
+		}
+	}
+	::-webkit-input-placeholder {
+		color: $color_silver_chalice_approx;
+	}
+	::-moz-placeholder {
+		color: $color_silver_chalice_approx;
+	}
+	:-ms-input-placeholder {
+		color: $color_silver_chalice_approx;
+	}
+	:-moz-placeholder {
+		color: $color_silver_chalice_approx;
+	}
+	&.hide #video-search-header-filtering {
+		animation-duration: 200ms;
+		animation-name: ProgressionMoveOut;
+		animation-timing-function: ease-in-out;
+		animation-fill-mode: forwards;
+	}
+}
+#search-icon-more {
+	background: $url_0 no-repeat center center/57px 24px;
+	position: absolute;
+	cursor: pointer;
+	top: 50%;
+	left: 30px;
+	display: block;
+	margin-top: -30px;
+	width: 65px;
+	height: 60px;
+	opacity: 0.62;
+	//Instead of the line below you could use @include transition-duration($duration-1, $duration-2, $duration-3, $duration-4, $duration-5, $duration-6, $duration-7, $duration-8, $duration-9, $duration-10)
+	transition-duration: 250ms;
+	//Instead of the line below you could use @include transition-property($property-1, $property-2, $property-3, $property-4, $property-5, $property-6, $property-7, $property-8, $property-9, $property-10)
+	transition-property: all;
+	//Instead of the line below you could use @include transition-timing-function($function-1, $function-2, $function-3, $function-4, $function-5, $function-6, $function-7, $function-8, $function-9, $function-10)
+	transition-timing-function: ease-in-out;
+	&:hover {
+		opacity: 1;
+	}
+}
+#video-search-header-filtering {
+	top: 100%;
+	margin-top: 1px;
+	position: absolute;
+	width: calc(100vw - 160px);
+	background: $white;
+	border-bottom: 1px solid $black_10;
+	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: 0 15px 20px $black_5;
+	line-height: 1.6;
+	opacity: 0;
+	visibility: hidden;
+	&:before {
+		content: "";
+		display: block;
+		position: absolute;
+		left: 0;
+		width: 1px;
+		background: $black_4;
+		height: 100%;
+	}
+	&:after {
+		content: "";
+		display: block;
+		position: absolute;
+		top: 0;
+		width: 10px;
+		height: 100%;
+		background: linear-gradient(to right, $black_3 0,rgba(0,0,0,0) 100%);
+	}
+	h5 {
+		font-weight: 400;
+		font-size: 13px;
+		text-transform: uppercase;
+		padding: 40px 20px 18px 0;
+		margin: 0;
+	}
+}
+#video-search-header-filtering-padding {
+	padding: 0 15px 0 19px;
+	.dotted-dividers-pro {
+		background: $url_1 repeat-all 0 0/1px 6px;
+		position: absolute;
+		top: 40px;
+		right: 0;
+		height: calc(100% - 40px);
+		width: 1px;
+	}
+}
+#video-search-header-buttons {
+	text-align: center;
+	padding: 30px 0 40px;
+	.btn {
+		margin-right: 5px;
+		margin-left: 5px;
+		&.btn-green-pro {
+			min-width: 300px;
+		}
+	}
+}
+.asRange {
+	background: $color_timberwolf_approx;
+	position: relative;
+	width: 331px;
+	height: 8px;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 8px;
+	.asRange-pointer {
+		background: $white;
+		position: absolute;
+		left: 30%;
+		z-index: 2;
+		width: 8px;
+		height: 8px;
+		margin-left: -4px;
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 9px;
+		cursor: pointer;
+		&:before {
+			position: absolute;
+			top: -4px;
+			right: -4px;
+			bottom: -4px;
+			left: -4px;
+			content: "";
+			background: $color_hippie_blue_approx;
+			//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+			border-radius: inherit;
+		}
+		&:after {
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			content: "";
+			background: $white;
+			//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+			border-radius: inherit;
+		}
+		&.start {
+			left: 0;
+			margin-left: 4px;
+		}
+		&.stop {
+			left: 100%;
+			margin-left: -12px;
+		}
+		.asRange-tip {
+			font: 12px/20px $font_2;
+			background: $chicago;
+			position: absolute;
+			top: -33px;
+			left: 0;
+			width: 36px;
+			height: 20px;
+			margin-left: -15px;
+			color: $white;
+			text-align: center;
+			border: 1px solid $chicago;
+			//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+			border-radius: 3px;
+			//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+			transition: opacity .3s ease-in-out 0s;
+			&:before {
+				background: $chicago;
+				position: absolute;
+				bottom: -3px;
+				left: 50%;
+				display: inline-block;
+				width: 6px;
+				height: 6px;
+				margin-left: -3px;
+				content: "";
+				//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+				transform: rotate(-45deg);
+			}
+		}
+		&:focus {
+			outline: none;
+			//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+			box-shadow: none;
+		}
+		span.asRange-tip {
+			font: 13px $font_3, $font_1;
+			color: $color_mine_shaft_approx;
+			background: none;
+			border: none;
+			top: 16px;
+			&:before {
+				display: none;
+			}
+		}
+	}
+	.asRange-selected {
+		background: $color_half_baked_approx;
+		position: absolute;
+		left: 30%;
+		z-index: 1;
+		width: 40%;
+		height: 8px;
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 9px;
+	}
+	.asRange-scale {
+		display: none;
+	}
+}
+.asRange-scale {
+	background: $color_timberwolf_approx;
+	position: relative;
+	width: 331px;
+	height: 8px;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 8px;
+	.asRange-pointer {
+		background: $white;
+		position: absolute;
+		left: 30%;
+		z-index: 2;
+		width: 8px;
+		height: 8px;
+		margin-left: -4px;
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 9px;
+		&:before {
+			position: absolute;
+			top: -4px;
+			right: -4px;
+			bottom: -4px;
+			left: -4px;
+			content: "";
+			background: $color_hippie_blue_approx;
+			//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+			border-radius: inherit;
+		}
+		&:after {
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			content: "";
+			background: $white;
+			//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+			border-radius: inherit;
+		}
+		&.start {
+			left: 0;
+			margin-left: 4px;
+		}
+		&.stop {
+			left: 100%;
+			margin-left: -12px;
+		}
+		.asRange-tip {
+			font: 12px/20px $font_2;
+			background: $chicago;
+			position: absolute;
+			top: -33px;
+			left: 0;
+			width: 36px;
+			height: 20px;
+			margin-left: -15px;
+			color: $white;
+			text-align: center;
+			border: 1px solid $chicago;
+			//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+			border-radius: 3px;
+			//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+			transition: opacity .3s ease-in-out 0s;
+			&:before {
+				background: $chicago;
+				position: absolute;
+				bottom: -3px;
+				left: 50%;
+				display: inline-block;
+				width: 6px;
+				height: 6px;
+				margin-left: -3px;
+				content: "";
+				//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+				transform: rotate(-45deg);
+			}
+		}
+	}
+	.asRange-selected {
+		background: $color_half_baked_approx;
+		position: absolute;
+		left: 30%;
+		z-index: 1;
+		width: 40%;
+		height: 8px;
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 9px;
+	}
+	.asRange-scale {
+		position: absolute;
+		bottom: -22px;
+		left: 0;
+		width: 100%;
+		height: 20px;
+		padding: 0;
+		margin: 0;
+		list-style: none;
+		background: $url_2 no-repeat 0 transparent;
+		li {
+			position: absolute;
+			top: 18px;
+			width: 30px;
+			height: 20px;
+			padding: 0;
+			margin: 0;
+			margin-left: -15px;
+			text-align: center;
+			&:first-child {
+				left: 0;
+			}
+			&:nth-child(2) {
+				left: 33.3%;
+			}
+			&:nth-child(3) {
+				left: 66.6%;
+			}
+			&:last-child {
+				left: 100%;
+			}
+		}
+	}
+}
+.progression-studios-slider-dashboard-image-background {
+	height: 85vh;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+}
+.progression-studios-slider-dashboard-caption-width {
+	max-width: 480px;
+	margin-left: 20px;
+	position: relative;
+	z-index: 10;
+}
+#content-sidebar-image {
+	position: relative;
+	text-align: center;
+	margin-bottom: 35px;
+}
+#content-sidebar-info {
+	position: relative;
+	text-align: center;
+	margin-bottom: 45px;
+}
+#profile-sidebar-name {
+	padding-top: 40px;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	z-index: 3;
+	h5 {
+		font-size: 19px;
+		margin-bottom: 8px;
+	}
+	h6 {
+		color: $color_silver_chalice_approx;
+		font-size: 14px;
+		font-weight: 400;
+	}
+}
+#profile-sidebar-gradient {
+	height: 90px;
+	position: absolute;
+	bottom: -2px;
+	width: 100%;
+	background: linear-gradient(to bottom, rgba(250,250,250,0) 0,$alabaster_100 100%);
+}
+.content-sidebar-section {
+	padding: 0 35px;
+	margin-bottom: 42px;
+}
+.content-sidebar-short-description {
+	font-size: 14px;
+}
+#movie-detail-header-pro {
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+	height: 84vh;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	.progression-studios-slider-more-options {
+		float: right;
+		cursor: pointer;
+		margin: 0;
+		position: relative;
+		padding: 22px 22px 0 12px;
+		i {
+			height: 50px;
+			width: 50px;
+			line-height: 50px;
+			text-align: center;
+			font-size: 13px;
+			//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+			border-radius: 60px;
+			border: 2px solid $white;
+			color: $white;
+		}
+		ul {
+			position: absolute;
+			right: 100%;
+			left: auto;
+			top: 22px;
+			width: 170px;
+			background: $white;
+			border: 1px solid $black_5;
+			//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+			box-shadow: 0 0 10px $black_6;
+			//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+			border-radius: 5px;
+			list-style: none;
+			margin: 0;
+			padding: 16px 0 0;
+		}
+	}
+}
+#movie-detail-gradient-pro {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 260px;
+	background: linear-gradient(to bottom, rgba(0,0,0,0) 0,$black_100 100%);
+}
+#movie-detail-header-media {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	z-index: 5;
+	padding: 0 0 30px 0;
+	h5 {
+		color: $white;
+		font-size: 21px;
+		margin-bottom: 15px;
+	}
+}
+.movie-detail-media-image {
+	position: relative;
+	margin-bottom: 8px;
+	span {
+		z-index: 10;
+		position: absolute;
+		display: block;
+		left: 50%;
+		top: 50%;
+		width: 34px;
+		height: 34px;
+		line-height: 34px;
+		margin-left: -17px;
+		margin-top: -17px;
+		font-size: 12px;
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 30px;
+		text-align: center;
+		border: 2px solid $white;
+		background: $black_6;
+		//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		box-shadow: 0 0 20px $black_15;
+		i {
+			position: relative;
+			left: 1px;
+		}
+	}
+	img {
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 5px;
+	}
+}
+#movie-detail-rating {
+	border-bottom: 1px solid $color_mercury_approx;
+	margin-bottom: 45px;
+	padding: 35px 0 25px;
+	h5 {
+		font-weight: 400;
+		font-size: 14px;
+		margin-bottom: 2px;
+	}
+	h6 {
+		font-weight: 400;
+		font-size: 14px;
+		float: right;
+		position: relative;
+		top: 12px;
+		margin-left: 12px;
+	}
+	.circle-rating-pro {
+		float: right;
+		position: relative;
+		span {
+			line-height: 40px;
+			width: 40px;
+			text-align: center;
+			font-size: 14px;
+		}
+	}
+}
+.rating-pro {
+	unicode-bidi: bidi-override;
+	direction: rtl;
+	input {
+		position: absolute;
+		left: -999999px;
+	}
+	label {
+		display: inline-block;
+		font-size: 0;
+		cursor: pointer;
+	}
+	> label {
+		&:before {
+			font: 400 15px 'Font Awesome 5 Free';
+			position: relative;
+			display: block;
+			content: "\f005";
+			color: $color_silver_approx;
+		}
+		&:hover {
+			&:before {
+				color: $color_apple_approx;
+				font-weight: 900;
+			}
+			~ label:before {
+				color: $color_apple_approx;
+				font-weight: 900;
+			}
+		}
+		&.selected {
+			&:before {
+				color: $color_apple_approx;
+				font-weight: 900;
+			}
+			~ label:before {
+				color: $color_apple_approx;
+				font-weight: 900;
+			}
+		}
+	}
+}
+.movie-details-section {
+	margin-bottom: 40px;
+	h2 {
+		font-size: 24px;
+		margin-bottom: 20px;
+	}
+}
+.movie-casting-sub-title {
+	color: $color_martini_approx;
+	font-size: 14px;
+}
+#account-edit-photo {
+	max-width: 300px;
+	margin: 0 auto 45px auto;
+	padding-right: 15px;
+	text-align: center;
+	img {
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 5px;
+	}
+	div {
+		margin-bottom: 25px;
+	}
+	p {
+		margin-bottom: 12px;
+	}
+}
+.account-settings-form {
+	.form-group {
+		margin: 0 0 15px 0;
+		select.custom-select {
+			height: 43px;
+		}
+	}
+	.registration-genres-step {
+		margin-top: 0;
+		margin-bottom: 15px;
+	}
+}
+.right-border-payment {
+	padding-right: 40px;
+	&:after {
+		content: "";
+		display: block;
+		width: 1px;
+		height: calc(100% - 40px);
+		position: absolute;
+		top: 0;
+		right: 20px;
+		background: $black_9;
+	}
+}
+#page-title-pro {
+	text-align: center;
+	padding: 80px 0;
+	background: $alabaster;
+	border-bottom: 1px solid $black_5;
+	h1 {
+		display: block;
+		width: 100%;
+		margin-bottom: 20px;
+		font-size: 38px;
+	}
+	h6 {
+		display: block;
+		width: 100%;
+		font-weight: 400;
+		color: $black_50;
+		font-size: 17px;
+	}
+}
+.short-border-bottom {
+	position: relative;
+	padding-bottom: 30px;
+	margin-bottom: 26px;
+	&:after {
+		position: absolute;
+		content: "";
+		display: block;
+		width: 40px;
+		height: 5px;
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 10px;
+		background: $color_mine_shaft_approx;
+		bottom: 0;
+	}
+}
+.centered-headings-pro {
+	text-align: center;
+	h1 {
+		display: block;
+		width: 100%;
+	}
+	h2 {
+		display: block;
+		width: 100%;
+	}
+	h3 {
+		display: block;
+		width: 100%;
+	}
+	h4 {
+		display: block;
+		width: 100%;
+	}
+	h5 {
+		display: block;
+		width: 100%;
+	}
+	h6 {
+		display: block;
+		width: 100%;
+	}
+}
+.pricing-plans-headings {
+	margin: 15px 0;
+	h6 {
+		font-weight: 400;
+		color: $black_50;
+		font-size: 17px;
+		margin-bottom: 15px;
+	}
+	h1 {
+		font-size: 32px;
+	}
+}
+#pricing-plans-background-image {
+	background: $url_4 no-repeat center center/contain;
+	padding: 60px 0 120px;
+	margin-bottom: -50px;
+}
+.registration-social-login-container {
+	border-right: 1px solid $color_mercury_approx;
+	width: calc(100% - 270px);
+	float: left;
+	position: relative;
+	margin-bottom: 0;
+	padding-right: 20px;
+}
+.registration-social-login-or {
+	position: absolute;
+	top: 0;
+	right: -22px;
+	padding: 15px 0 12px;
+	width: 40px;
+	background: $white;
+	text-align: center;
+	font-weight: 700;
+}
+.registration-social-login-options {
+	padding: 20px 20px 20px 40px;
+	width: 270px;
+	float: right;
+	h6 {
+		line-height: 1.4;
+		font-weight: 600;
+		text-align: center;
+		margin: 32px 0 25px;
+	}
+}
+.social-icon-login {
+	font: 400 13px $font_0, $font_1;
+	cursor: pointer;
+	background: $color_gray_approx;
+	border-color: $color_gray_approx;
+	color: $white;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 4px;
+	padding: 12px 15px;
+	margin-bottom: 10px;
+	position: relative;
+	text-align: center;
+	//Instead of the line below you could use @include transition-duration($duration-1, $duration-2, $duration-3, $duration-4, $duration-5, $duration-6, $duration-7, $duration-8, $duration-9, $duration-10)
+	transition-duration: 250ms;
+	//Instead of the line below you could use @include transition-property($property-1, $property-2, $property-3, $property-4, $property-5, $property-6, $property-7, $property-8, $property-9, $property-10)
+	transition-property: all;
+	//Instead of the line below you could use @include transition-timing-function($function-1, $function-2, $function-3, $function-4, $function-5, $function-6, $function-7, $function-8, $function-9, $function-10)
+	transition-timing-function: ease-in-out;
+	&:hover {
+		opacity: 0.8;
+	}
+	i {
+		position: absolute;
+		left: 18px;
+		top: 17px;
+	}
+	&.facebook-color {
+		background: $color_chambray_approx;
+	}
+	&.twitter-color {
+		background: $color_picton_blue_approx;
+	}
+	&.google-color {
+		background: $color_punch_approx;
+		margin-bottom: 0;
+	}
+}
+@media(min-width: 992px) {
+	.modal-md {
+		max-width: 600px;
+	}
+}
+.modal-backdrop {
+	background: $white;
+	&.show {
+		opacity: 0.85;
+	}
+}
+.modal-body-pro {
+	padding: 0 60px 30px;
+	&.social-login-modal-body-pro {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	.registration-social-login-container {
+		width: calc(100% - 240px);
+		padding-right: 20px;
+	}
+	.registration-social-login-or {
+		padding: 9px 0 12px;
+		font-size: 14px;
+	}
+	.registration-social-login-options {
+		padding: 15px 20px 20px 40px;
+		width: 240px;
+		float: right;
+		h6 {
+			margin: 0 0 18px 0;
+			font-size: 14px;
+		}
+	}
+	.social-icon-login {
+		padding: 10px 15px;
+		font-size: 12px;
+		margin-bottom: 8px;
+		i {
+			left: 15px;
+			top: 14px;
+		}
+	}
+}
+.modal-header-pro {
+	padding: 40px 30px 0;
+	text-align: center;
+	h2 {
+		font-size: 26px;
+		margin-bottom: 12px;
+	}
+	h6 {
+		font-size: 16px;
+		font-weight: 400;
+		color: $black_50;
+		margin-bottom: 15px;
+	}
+}
+.forgot-your-password {
+	margin-top: -5px;
+	font-size: 13px;
+	color: $color_martini_approx;
+	text-align: right;
+	position: relative;
+	top: 5px;
+	a {
+		color: $color_martini_approx;
+		&:hover {
+			color: $color_mine_shaft_approx;
+		}
+	}
+}
+.checkbox-remember-pro {
+	margin-top: -5px;
+	font-size: 13px;
+	color: $color_martini_approx;
+	label {
+		cursor: pointer;
+	}
+	input {
+		margin-right: 6px;
+	}
+}
+.registration-step-circle-icon {
+	position: relative;
+	float: left;
+	text-align: center;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 30px;
+	font-weight: 700;
+	font-size: 17px;
+	background: $color_alto_approx;
+	color: $white;
+	line-height: 50px;
+	width: 46px;
+	height: 46px;
+	line-height: 46px;
+	margin-right: 15px;
+	&:before {
+		z-index: -1;
+		content: '';
+		display: block;
+		position: absolute;
+		bottom: -8px;
+		left: 50%;
+		width: 0;
+		height: 0;
+		margin-left: -18px;
+		border-left: 18px solid transparent;
+		border-right: 18px solid transparent;
+		border-top: 18px solid $color_alto_approx;
+	}
+}
+.registration-step-number {
+	color: $black_30;
+	text-transform: uppercase;
+	font-size: 14px;
+	margin-bottom: 3px;
+}
+.registration-steps-page-container {
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 6px;
+	background: $white;
+	border: 1px solid $black_5;
+	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: -15px 26px 30px $black_9;
+	max-width: 850px;
+	margin: 0 auto;
+	.last-form-group-continue {
+		margin-top: 15px;
+		.btn {
+			float: left;
+		}
+	}
+	.checkbox-remember-pro {
+		margin-left: 20px;
+		position: relative;
+		input {
+			vertical-align: top;
+			margin-top: 11px;
+		}
+		label {
+			max-width: 345px;
+		}
+	}
+	form.registration-steps-form {
+		padding: 40px;
+	}
+}
+.billing-form-pro {
+	width: 100%;
+	margin-top: -10px;
+}
+.registration-step-final-padding {
+	padding: 60px;
+}
+.registration-genres-step {
+	margin-top: 40px;
+	h5 {
+		font-size: 17px;
+		font-weight: 600;
+	}
+}
+.registration-step-final-footer {
+	margin-top: 35px;
+	text-align: center;
+	.btn {
+		margin: 0 4px;
+		padding: 13px 26px;
+		font-size: 14px;
+	}
+}
+.copyright-text-pro {
+	font-size: 14px;
+	color: $color_gray_approx;
+	padding: 25px 0;
+}
+.progression-pricing-section-background {
+	background: $url_5 no-repeat bottom center/cover;
+	margin: -16px 0 -50px;
+	padding: 20px 0 115px;
+}
+.pricing-table-pro {
+	padding-top: 50px;
+	text-align: center;
+	.pricing-table-col {
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 10px;
+		padding: 65px 0 44px;
+		margin: 0 20px;
+		background: $white;
+		//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		box-shadow: 0 15px 30px $white_80;
+		border: 1px solid rgba(0,0,0, 0);
+	}
+	.pricing-table-col-shadow-pro {
+		//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		box-shadow: 0 26px 30px $black_9;
+		border-color: $black_5;
+	}
+	h6 {
+		font-size: 14px;
+		letter-spacing: 0.06em;
+		margin-bottom: 25px;
+	}
+	h2 {
+		font-size: 50px;
+		margin-bottom: 25px;
+		color: $color_apple_approx;
+		sup {
+			font-size: 18px;
+			font-weight: 400;
+			top: -20px;
+			padding-right: 6px;
+		}
+		span {
+			font-size: 14px;
+			color: $color_martini_approx;
+			font-weight: 400;
+			letter-spacing: 0.02em;
+		}
+	}
+	ul {
+		list-style: none;
+		margin: 0 0 35px 0;
+		padding: 0;
+		li {
+			color: $color_mine_shaft_65_approx;
+			font-family: $font_0, $font_1;
+			font-weight: 300;
+			margin-bottom: 10px;
+		}
+	}
+}
+.progression-studios-slider-image-background {
+	height: 650px;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+}
+.progression-studios-slider-mobile-background-cover-dark {
+	background: $color_gallery_65_approx;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	background: $color_cinder_60_approx;
+}
+.progression-studios-slider-mobile-background-cover {
+	background: $color_gallery_65_approx;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+}
+.progression-studios-slider-display-table {
+	display: table;
+	width: 100%;
+	height: 100%;
+}
+.progression-studios-slider-vertical-align {
+	display: table-cell;
+	vertical-align: middle;
+	width: 100%;
+}
+.btn-slider-pro {
+	font-size: 14px;
+	margin-bottom: 25px;
+	padding: 14px 22px;
+}
+.slides {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	> li {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+}
+.flex-control-nav {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	width: 100%;
+	position: absolute;
+	bottom: 15px;
+	text-align: center;
+	z-index: 10;
+	li {
+		margin: 0;
+		display: inline-block;
+		zoom: 1;
+		*display: inline;
+		position: relative;
+	}
+}
+.flex-direction-nav {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	*height: 0;
+	a {
+		font: 900 24px/40px 'Font Awesome 5 Free';
+		text-decoration: none;
+		display: block;
+		position: absolute;
+		top: 50%;
+		z-index: 10;
+		overflow: hidden;
+		opacity: 0;
+		cursor: pointer;
+		//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+		transform: translate(0, 0);
+		text-align: center;
+		border: none;
+		margin: -20px 0 0;
+		width: 45px;
+		height: 40px;
+		color: $color_silver_approx;
+		//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		box-shadow: 1px 1px 5px $black_2;
+		&.flex-prev:before {
+			content: "\f053";
+			position: relative;
+			left: -1px;
+		}
+		&.flex-next:before {
+			content: "\f054";
+			position: relative;
+			right: -1px;
+		}
+	}
+	.flex-prev {
+		left: 0;
+		//Instead of the line below you could use @include border-top-right-radius($radius)
+		border-top-right-radius: 3px;
+		//Instead of the line below you could use @include border-bottom-right-radius($radius)
+		border-bottom-right-radius: 3px;
+	}
+	.flex-next {
+		right: 0;
+		//Instead of the line below you could use @include border-top-left-radius($radius)
+		border-top-left-radius: 3px;
+		//Instead of the line below you could use @include border-bottom-left-radius($radius)
+		border-bottom-left-radius: 3px;
+	}
+	.flex-disabled {
+		opacity: 0!important;
+		filter: alpha(opacity=0);
+		cursor: default;
+	}
+}
+.flex-pauseplay {
+	span {
+		text-transform: capitalize;
+	}
+	a {
+		display: block;
+		width: 20px;
+		height: 20px;
+		position: absolute;
+		bottom: 5px;
+		left: 10px;
+		opacity: 0.8;
+		z-index: 10;
+		overflow: hidden;
+		cursor: pointer;
+		color: $black;
+		&:before {
+			font: 20px $font_5;
+			display: inline-block;
+			content: '\f004';
+		}
+		&:hover {
+			opacity: 1;
+		}
+		&.flex-play:before {
+			content: '\f003';
+		}
+	}
+}
+.flex-viewport {
+	max-height: 2000px;
+	//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+	transition: all 1s ease;
+}
+.flex-control-thumbs {
+	margin: 5px 0 0;
+	position: static;
+	overflow: hidden;
+	li {
+		width: 25%;
+		float: left;
+		margin: 0;
+	}
+	img {
+		width: 100%;
+		height: auto;
+		display: block;
+		opacity: .7;
+		cursor: pointer;
+		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+		transition: all 1s ease;
+		&:hover {
+			opacity: 1;
+		}
+	}
+	.flex-active {
+		opacity: 1;
+		cursor: default;
+	}
+}
+#mobile-bars-icon-pro {
+	float: right;
+	line-height: 1;
+	color: $color_mine_shaft_approx;
+	font-size: 18px;
+	padding: 34px 30px;
+	cursor: pointer;
+	margin-right: -15px;
+	display: none;
+	//Instead of the line below you could use @include transition-duration($duration-1, $duration-2, $duration-3, $duration-4, $duration-5, $duration-6, $duration-7, $duration-8, $duration-9, $duration-10)
+	transition-duration: 250ms;
+	//Instead of the line below you could use @include transition-property($property-1, $property-2, $property-3, $property-4, $property-5, $property-6, $property-7, $property-8, $property-9, $property-10)
+	transition-property: all;
+	//Instead of the line below you could use @include transition-timing-function($function-1, $function-2, $function-3, $function-4, $function-5, $function-6, $function-7, $function-8, $function-9, $function-10)
+	transition-timing-function: ease-in-out;
+	i.fa-bars {
+		min-width: 18px;
+		text-align: center;
+	}
+}
+@media only screen and(min-width: 960px) {
+	#mobile-navigation-pro {
+		display: none !important;
+	}
+}
+.menu-collapser {
+	display: none !important;
+}
+.example-no-css3 {
+	//Instead of the line below you could use @include transition-duration($duration-1, $duration-2, $duration-3, $duration-4, $duration-5, $duration-6, $duration-7, $duration-8, $duration-9, $duration-10)
+	transition-duration: 0ms !important;
+}
+@keyframes ProgressionMoveUp {
+	from {
+	}
+	to {
+		//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+		transform: translateY(0px);
+		opacity: 1;
+	}
+}
+@keyframes ProgressionMoveOut {
+	from {
+		visibility: visible;
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
+		visibility: hidden;
+	}
+}
+li {
+	&.flex-active-slide {
+		&.progression_studios_animate_in .progression-studios-slider-caption-align {
+			animation-name: ProgressionStudiosElementszoomup;
+		}
+		&.progression_studios_animate_out .progression-studios-slider-caption-align {
+			animation-name: ProgressionStudiosElementszoomout;
+		}
+		&.progression_studios_animate_up .progression-studios-slider-caption-align {
+			animation-name: ProgressionStudiosElementsfadeup;
+		}
+		&.progression_studios_animate_down .progression-studios-slider-caption-align {
+			animation-name: ProgressionStudiosElementsfadedown;
+		}
+		&.progression_studios_animate_left .progression-studios-slider-caption-align {
+			animation-name: ProgressionStudiosElementsfadeleft;
+		}
+		&.progression_studios_animate_right .progression-studios-slider-caption-align {
+			animation-name: ProgressionStudiosElementsfaderight;
+		}
+	}
+	&.sfHover ul.sub-menu {
+		//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+		transform: translateY(20px);
+		opacity: 0;
+		animation-duration: 250ms;
+		animation-name: ProgressionMoveUp;
+		animation-timing-function: ease-in-out;
+		animation-fill-mode: forwards;
+	}
+}
+@keyframes ProgressionStudiosElementsfadeup {
+	0% {
+		opacity: 0;
+		//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+		transform: translate3d(0, 20%, 0);
+	}
+	100% {
+		opacity: 1;
+		//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+		transform: translate3d(0, 0, 0);
+	}
+}
+@keyframes ProgressionStudiosElementsfadedown {
+	0% {
+		opacity: 0;
+		//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+		transform: translate3d(0, -20%, 0);
+	}
+	100% {
+		opacity: 1;
+		//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+		transform: translate3d(0, 0, 0);
+	}
+}
+@keyframes ProgressionStudiosElementsfadeleft {
+	0% {
+		opacity: 0;
+		//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+		transform: translate3d(10%, 0, 0);
+	}
+	100% {
+		opacity: 1;
+		//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+		transform: translate3d(0, 0, 0);
+	}
+}
+@keyframes ProgressionStudiosElementsfaderight {
+	0% {
+		opacity: 0;
+		//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+		transform: translate3d(-10%, 0, 0);
+	}
+	100% {
+		opacity: 1;
+		//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+		transform: translate3d(0, 0, 0);
+	}
+}
+@keyframes ProgressionStudiosElementszoomup {
+	0% {
+		opacity: 0;
+		//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+		transform: scale(1.2);
+	}
+	100% {
+		opacity: 1;
+		//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+		transform: scale(1);
+	}
+}
+@keyframes ProgressionStudiosElementszoomout {
+	0% {
+		opacity: 0;
+		//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+		transform: scale(0.8);
+	}
+	100% {
+		opacity: 1;
+		//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+		transform: scale(1);
+	}
+}
+@media only screen and(min-width: 959px) and(max-width: 1100px) {
+	ul {
+		&.dashboard-genres-pro {
+			padding-right: 20px;
+			padding-left: 20px;
+			li {
+				float: left;
+				width: 16.6%;
+				h6 {
+					font-size: 11px;
+				}
+			}
+		}
+		&.dashboard-sub-menu li a {
+			font-size: 15px;
+			margin: 0 10px 5px;
+		}
+	}
+	.dashboard-container {
+		padding: 0 40px;
+	}
+	.progression-studios-slider-dashboard-caption-width {
+		max-width: 450px;
+	}
+	#content-sidebar-pro {
+		width: 260px;
+		&:after {
+			width: 260px;
+		}
+	}
+	.col-sm.extra-padding {
+		padding-right: 15px;
+		padding-left: 15px;
+		position: relative;
+	}
+	a.progression-studios-slider-play-btn {
+		right: 10%;
+	}
+	main#col-main-with-sidebar {
+		margin-left: 420px;
+	}
+}
+@media only screen and(min-width: 768px) and(max-width: 959px) {
+	#site-navigation-pro {
+		display: none;
+	}
+	#sidebar-bg {
+		&:before {
+			display: none;
+		}
+		&:after {
+			display: none;
+		}
+	}
+	#header-user-notification {
+		display: none;
+	}
+	#video-search-header {
+		display: none;
+	}
+	#video-logo-background {
+		&:after {
+			display: none;
+		}
+		&:before {
+			display: none;
+		}
+	}
+	#mobile-bars-icon-pro {
+		display: block;
+	}
+	#header-user-profile-click {
+		padding-right: 15px;
+	}
+	#header-user-profile-menu {
+		right: -5px;
+	}
+	main {
+		&#col-main {
+			margin-left: 0;
+		}
+		&#col-main-with-sidebar {
+			margin-left: 260px;
+		}
+	}
+	#content-sidebar-pro {
+		margin-left: 0;
+		width: 260px;
+		&:after {
+			left: 0;
+			width: 260px;
+		}
+	}
+	#page-title-pro {
+		h1 {
+			font-size: 32px;
+		}
+		h6 {
+			font-size: 15px;
+		}
+	}
+	ul {
+		&.dashboard-genres-pro {
+			padding-right: 20px;
+			padding-left: 20px;
+			li {
+				float: left;
+				width: 16.6%;
+				h6 {
+					font-size: 11px;
+				}
+			}
+		}
+		&.progression-studios-slider-rating {
+			margin: 0 0 5px 0;
+			li {
+				padding: 5px;
+				font-size: 10px;
+			}
+		}
+		&.progression-studios-slider-meta {
+			margin: 0 0 10px 0;
+			li {
+				font-size: 13px;
+			}
+		}
+		&#registration-steps-pro li {
+			width: 50%;
+			margin-bottom: 25px;
+		}
+		&.registration-invite-friends-list li {
+			width: calc(49.5% - 8px);
+		}
+	}
+	.modal-body-pro {
+		.registration-social-login-container {
+			border-right: 0;
+			width: 100%;
+			padding-right: 0;
+		}
+		.registration-social-login-or {
+			position: relative;
+			text-align: center;
+			font-size: 20px;
+			width: 100%;
+			padding: 0;
+			right: 0;
+		}
+		.registration-social-login-options {
+			padding-left: 20px;
+			width: 100%;
+		}
+	}
+	.registration-social-login-container {
+		border-right: 0;
+		width: 100%;
+		padding-right: 0;
+	}
+	.registration-social-login-or {
+		position: relative;
+		text-align: center;
+		font-size: 20px;
+		width: 100%;
+		padding: 0;
+		right: 0;
+	}
+	.registration-social-login-options {
+		padding-left: 20px;
+		width: 100%;
+		h6 {
+			margin-top: 0;
+		}
+	}
+	.progression-studios-slider-caption-width {
+		max-width: 310px;
+		h2 {
+			font-size: 39px;
+			margin-bottom: 15px;
+		}
+		h6 {
+			font-size: 15px;
+			margin-bottom: 25px;
+		}
+	}
+	.dashboard-container {
+		padding: 0 20px;
+	}
+	.progression-studios-slider-dashboard-caption-width {
+		max-width: 400px;
+	}
+	#masthead-pro .btn-header-pro {
+		display: none;
+	}
+	nav#sidebar-nav {
+		display: none;
+	}
+	a.progression-studios-slider-play-btn {
+		right: 8%;
+	}
+	.flexslider.progression-studios-dashboard-slider {
+		h6 {
+			font-size: 14px;
+			margin-bottom: 16px;
+		}
+		h2 {
+			font-size: 40px;
+		}
+	}
+	p.progression-studios-slider-description {
+		font-size: 13px;
+		margin-bottom: 20px;
+	}
+}
+@media only screen and(max-width: 767px) {
+	#site-navigation-pro {
+		display: none;
+	}
+	#sidebar-bg {
+		&:before {
+			display: none;
+		}
+		&:after {
+			display: none;
+		}
+	}
+	#video-logo-background {
+		&:after {
+			display: none;
+		}
+		&:before {
+			display: none;
+		}
+	}
+	#header-user-notification {
+		display: none;
+	}
+	#video-search-header {
+		display: none;
+	}
+	#mobile-bars-icon-pro {
+		display: block;
+	}
+	#header-user-profile-click {
+		padding-right: 0;
+	}
+	#header-user-profile {
+		img {
+			margin-right: 0;
+		}
+		#header-username {
+			display: none;
+		}
+	}
+	#header-user-profile-menu {
+		right: 0;
+	}
+	main {
+		&#col-main {
+			margin-left: 0;
+		}
+		&#col-main-with-sidebar {
+			margin-left: 0;
+		}
+	}
+	#content-sidebar-pro {
+		margin-left: 0;
+		width: 100%;
+		margin-bottom: 40px;
+		&:after {
+			display: none;
+		}
+	}
+	#page-title-pro {
+		h1 {
+			font-size: 26px;
+		}
+		h6 {
+			font-size: 14px;
+		}
+	}
+	.copyright-text-pro {
+		text-align: center;
+	}
+	ul {
+		&.dashboard-genres-pro {
+			padding-right: 0;
+			padding-left: 0;
+			li {
+				float: left;
+				width: 33.2%;
+			}
+		}
+		&.progression-studios-slider-rating {
+			margin: 0 0 5px 0;
+			li {
+				margin: 0 7px 5px 0;
+				padding: 6px;
+				font-size: 10px;
+			}
+		}
+		&.progression-studios-slider-meta {
+			margin: 0 0 10px 0;
+			li {
+				font-size: 12px;
+				&:after {
+					padding: 0 10px;
+				}
+			}
+		}
+		&.dashboard-sub-menu {
+			text-align: center;
+			li a {
+				margin: 0 10px 5px;
+				font-size: 15px;
+			}
+		}
+		&#registration-steps-pro li {
+			width: 100%;
+			margin-bottom: 20px;
+		}
+		&.registration-invite-friends-list li {
+			width: calc(99% - 8px);
+		}
+		&.registration-genres-choice li {
+			width: calc(33.3% - 10px);
+		}
+		&.welcome-features li {
+			width: 100%;
+		}
+	}
+	.registration-steps-page-container {
+		.checkbox-remember-pro {
+			display: block;
+			margin-top: 20px;
+			margin-left: 0;
+			input {
+				position: absolute;
+			}
+			label {
+				margin-left: 26px;
+			}
+		}
+		.last-form-group-continue .btn {
+			float: none;
+		}
+		form.registration-steps-form {
+			padding: 0;
+		}
+	}
+	.modal-body-pro {
+		.registration-social-login-container {
+			border-right: 0;
+			width: 100%;
+			padding-right: 0;
+		}
+		.registration-social-login-or {
+			position: relative;
+			text-align: center;
+			font-size: 20px;
+			width: 100%;
+			padding: 0;
+			right: 0;
+		}
+		.registration-social-login-options {
+			padding-left: 20px;
+			width: 100%;
+		}
+	}
+	.registration-social-login-container {
+		border-right: 0;
+		width: 100%;
+		padding-right: 0;
+	}
+	.registration-social-login-or {
+		position: relative;
+		text-align: center;
+		font-size: 20px;
+		width: 100%;
+		padding: 0;
+		right: 0;
+	}
+	.registration-social-login-options {
+		padding-left: 20px;
+		width: 100%;
+		h6 {
+			margin-top: 0;
+		}
+	}
+	.form-group-invite-friends {
+		padding: 20px;
+	}
+	.registration-step-final-padding {
+		padding: 20px;
+	}
+	.registration-billing-form {
+		padding: 20px;
+		.btn {
+			float: none;
+		}
+	}
+	.billing-plan-container {
+		margin-bottom: 25px;
+		float: none;
+	}
+	.progression-studios-slider-mobile-background-cover-dark {
+		opacity: 1;
+	}
+	.progression-studios-slider-mobile-background-cover {
+		opacity: 1;
+	}
+	.flexslider {
+		&.progression-studios-slider {
+			height: 580px;
+		}
+		&.progression-studios-dashboard-slider {
+			min-height: 640px;
+			&.progression-studios-full-height-slider {
+				min-height: 640px;
+			}
+			.circle-rating-pro {
+				display: none;
+			}
+			h6 {
+				font-size: 13px;
+				margin-bottom: 14px;
+			}
+			h2 {
+				font-size: 34px;
+				margin-bottom: 5px;
+			}
+			h5 {
+				font-size: 13px;
+				margin-top: 6px;
+				margin-bottom: 12px;
+			}
+		}
+	}
+	.progression-studios-slider-image-background {
+		height: 580px;
+	}
+	.progression-studios-slider-caption-width {
+		width: 85%;
+		margin: 0 auto;
+		text-align: center;
+		h2 {
+			font-size: 34px;
+			margin-bottom: 12px;
+		}
+		h6 {
+			font-size: 13px;
+			margin-bottom: 20px;
+		}
+	}
+	.btn-slider-pro {
+		font-size: 13px;
+		padding: 11px 18px;
+	}
+	.dashboard-container {
+		padding: 0 20px;
+	}
+	.progression-studios-slider-dashboard-image-background {
+		min-height: 640px;
+	}
+	.progression-studios-slider-dashboard-caption-width {
+		max-width: 100%;
+		margin-left: 0;
+	}
+	.progression-studios-slider-more-options {
+		i {
+			height: 44px;
+			width: 44px;
+			line-height: 44px;
+			font-size: 12px;
+		}
+		ul {
+			top: 100%;
+			left: -65px;
+		}
+	}
+	#account-edit-photo {
+		padding: 0;
+	}
+	.right-border-payment {
+		padding-right: 0;
+		padding-bottom: 50px;
+		&:after {
+			top: auto;
+			right: 0;
+			width: 100%;
+			height: 1px;
+			bottom: 35px;
+		}
+	}
+	#movie-detail-rating {
+		h6 {
+			float: left;
+			margin-left: 0;
+			margin-right: 12px;
+		}
+		.circle-rating-pro {
+			float: left;
+		}
+	}
+	#movie-detail-header-media {
+		display: none;
+	}
+	#masthead-pro .btn-header-pro {
+		display: none;
+	}
+	nav#sidebar-nav {
+		display: none;
+	}
+	footer#footer-pro ul.social-icons-pro {
+		text-align: center;
+		padding-top: 0;
+		li:last-child a {
+			margin-right: 4px;
+		}
+	}
+	.pricing-plans-page-container .pricing-table-col {
+		padding-right: 0;
+		padding-left: 0;
+	}
+	.progression-studios-full-height-slider .progression-studios-slider-dashboard-image-background {
+		min-height: 640px;
+	}
+	a.progression-studios-slider-play-btn {
+		display: none;
+	}
+	p.progression-studios-slider-description {
+		font-size: 13px;
+		margin-bottom: 20px;
+	}
+	.progression-studios-dashboard-slider .btn-slider-pro {
+		margin-right: 10px;
+	}
+}
+span.user-notification-count {
+	background: $color_apple_approx;
+	display: block;
+	top: 29px;
+	right: 8px;
+	text-align: center;
+	position: absolute;
+	border: 2px solid $white;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 30px;
+	width: 18px;
+	height: 18px;
+	line-height: 15px;
+	font-weight: 700;
+	font-size: 8px;
+	color: $white;
+}
+.flex-control-paging li {
+	width: 20px;
+	height: 10px;
+	text-align: center;
+	a {
+		width: 7px;
+		height: 7px;
+		bottom: 0;
+		display: block;
+		cursor: pointer;
+		text-indent: -9999px;
+		position: absolute;
+		background: none;
+		border: 2px solid $color_alto_approx;
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 15px;
+		&.flex-active {
+			@extend %extend_2;
+			cursor: default;
+		}
+	}
+}
+.col-sm.extra-padding {
+	padding-right: 35px;
+	padding-left: 35px;
+	position: relative;
+}
+.extra-range-padding .asRange {
+	background: $color_alto_approx;
+	margin-top: 5px;
+	margin-right: 14px;
+	max-width: 270px;
+}
+.progression-studios-full-height-slider .progression-studios-slider-dashboard-image-background {
+	height: calc(100vh - 90px);
+}
+.progression-studios-dashboard-slider .btn-slider-pro {
+	float: left;
+	margin-right: 15px;
+}
+.mx-auto .short-border-bottom:after {
+	left: 50%;
+	margin-left: -20px;
+}
+.modal-dialog .modal-content {
+	border: 1px solid $black_4;
+	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: 0 26px 30px $black_9;
+}
+.row.adjust-margin-top .form-group {
+	margin-top: 0;
+	padding-top: 0;
+	padding-bottom: 10px;
+}
+.registration-invite-friends-form .form-group {
+	margin: 0;
+}
+footer#footer-pro {
+	border-top: 1px solid $black_9;
+	ul.social-icons-pro {
+		padding: 20px 0;
+		text-align: right;
+	}
+}
+.flex-container a {
+	&:hover {
+		outline: none;
+	}
+	&:focus {
+		outline: none;
+	}
+}
+.flex-slider a {
+	&:hover {
+		outline: none;
+	}
+	&:focus {
+		outline: none;
+	}
+}
+html[xmlns] .flexslider .slides {
+	display: block;
+}
+* html .flexslider .slides {
+	height: 1%;
+}
+.no-js .flexslider .slides > li:first-child {
+	display: block;
+}
+.loading .flex-viewport {
+	max-height: 300px;
+}
+.carousel li {
+	margin-right: 5px;
+}
+.active-mobile-icon-pro #mobile-bars-icon-pro i.fa-bars:before {
+	content: "\f00d";
+}
+.progression_studios_animate_in .progression-studios-slider-caption-align {
+	animation-delay: 500ms;
+	animation-duration: 800ms;
+	opacity: 0;
+	animation-fill-mode: both;
+}
+.progression_studios_animate_out .progression-studios-slider-caption-align {
+	animation-delay: 500ms;
+	animation-duration: 800ms;
+	opacity: 0;
+	animation-fill-mode: both;
+}
+.progression_studios_animate_up .progression-studios-slider-caption-align {
+	animation-delay: 500ms;
+	animation-duration: 800ms;
+	opacity: 0;
+	animation-fill-mode: both;
+}
+.progression_studios_animate_down .progression-studios-slider-caption-align {
+	animation-delay: 500ms;
+	animation-duration: 800ms;
+	opacity: 0;
+	animation-fill-mode: both;
+}
+.progression_studios_animate_right .progression-studios-slider-caption-align {
+	animation-delay: 500ms;
+	animation-duration: 800ms;
+	opacity: 0;
+	animation-fill-mode: both;
+}
+.progression_studios_animate_left .progression-studios-slider-caption-align {
+	animation-delay: 500ms;
+	animation-duration: 800ms;
+	opacity: 0;
+	animation-fill-mode: both;
+}
